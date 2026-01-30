@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlyutofh3wgrc"]
+
+[ext_resource type="PackedScene" uid="uid://y0vvytsjrwuw" path="res://Menus/PauseMenu/pause_menu.tscn" id="1_3mhv4"]
+[ext_resource type="PackedScene" uid="uid://br1gwjdp68rt" path="res://Hud/hud.tscn" id="1_dilhk"]
+[ext_resource type="Texture2D" uid="uid://gmuroxlv2inw" path="res://Assets/icon.svg" id="1_n0qsc"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Hud" parent="." instance=ExtResource("1_dilhk")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(506, 291)
+texture = ExtResource("1_n0qsc")
+
+[node name="Pause_menu" parent="." instance=ExtResource("1_3mhv4")]
+process_mode = 3
+visible = false
+offset_right = 1174.0
+offset_bottom = 666.0

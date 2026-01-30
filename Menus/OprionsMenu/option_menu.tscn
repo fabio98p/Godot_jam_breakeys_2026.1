@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cii30g83b4lg7"]
+
+[ext_resource type="Script" uid="uid://cbw24ebbkrj3m" path="res://Menus/OprionsMenu/option_menu.gd" id="1_v8jvg"]
+[ext_resource type="PackedScene" uid="uid://bhcgl4u1cp71i" path="res://Menus/OprionsMenu/audio.tscn" id="2_lsu76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8jvg"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Option_menu" type="PanelContainer" unique_id=1898856713]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 22.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.981261, 0.972962)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_v8jvg")
+script = ExtResource("1_v8jvg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1945573184]
+layout_mode = 2
+
+[node name="Select_menu" type="HBoxContainer" parent="VBoxContainer" unique_id=468834577]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 160
+
+[node name="AudioButton" type="Button" parent="VBoxContainer/Select_menu" unique_id=1085965190]
+layout_mode = 2
+text = "Audio"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Select_menu" unique_id=112852900]
+layout_mode = 2
+
+[node name="ControlsButton" type="Button" parent="VBoxContainer/Select_menu" unique_id=1821677874]
+layout_mode = 2
+text = "Controls"
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/Select_menu" unique_id=292727057]
+layout_mode = 2
+
+[node name="ResolutionButton" type="Button" parent="VBoxContainer/Select_menu" unique_id=99534202]
+layout_mode = 2
+text = "Resolution"
+
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/Select_menu" unique_id=309243011]
+visible = false
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1242538640]
+layout_mode = 2
+
+[node name="Audio" parent="VBoxContainer" unique_id=2125689962 instance=ExtResource("2_lsu76")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Controls" type="PanelContainer" parent="VBoxContainer" unique_id=1429092737]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Controls" unique_id=1327600708]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Controls/VBoxContainer" unique_id=334619551]
+layout_mode = 2
+text = "CONTROLS"
+
+[node name="Resolution" type="PanelContainer" parent="VBoxContainer" unique_id=719149580]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Resolution" unique_id=552953101]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Resolution/VBoxContainer" unique_id=823622369]
+layout_mode = 2
+text = "REVOLUTION"
+
+[node name="Close" type="Button" parent="." unique_id=616314966]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "  X  "
+
+[connection signal="pressed" from="VBoxContainer/Select_menu/AudioButton" to="." method="_on_audio_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Select_menu/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Select_menu/ResolutionButton" to="." method="_on_resolution_button_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

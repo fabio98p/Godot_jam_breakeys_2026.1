@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhcgl4u1cp71i"]
+
+[ext_resource type="Script" uid="uid://fakdkfus40p6" path="res://Menus/OprionsMenu/audio.gd" id="1_ees0l"]
+
+[node name="Audio" type="PanelContainer"]
+size_flags_vertical = 3
+script = ExtResource("1_ees0l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "AUDIO"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="MasterHSlider" type="HSlider" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="MusicHSlider" type="HSlider" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="SFXHSlider" type="HSlider" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2

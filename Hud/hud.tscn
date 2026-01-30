@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://br1gwjdp68rt"]
+
+[ext_resource type="Script" uid="uid://bd6upmargflxi" path="res://Hud/hud.gd" id="1_f4f2m"]
+[ext_resource type="PackedScene" uid="uid://bmjsv5wwroagv" path="res://Hud/Bar/bar.tscn" id="2_ngqfk"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f4f2m")
+
+[node name="Bar" parent="." instance=ExtResource("2_ngqfk")]

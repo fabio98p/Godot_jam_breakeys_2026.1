@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmjsv5wwroagv"]
+
+[ext_resource type="Script" uid="uid://dg6ww7gsrail5" path="res://Hud/Bar/bar.gd" id="1_bkbl8"]
+[ext_resource type="Texture2D" uid="uid://dd855gmfqujom" path="res://Assets/white.png" id="2_y4gwn"]
+[ext_resource type="Texture2D" uid="uid://dl1h2pko4rbw1" path="res://Hud/Assets/healtbar.png" id="3_nwph8"]
+
+[node name="Bar" type="Node2D"]
+script = ExtResource("1_bkbl8")
+
+[node name="HpBar" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(0, 16)
+scale = Vector2(1e-05, 1)
+texture = ExtResource("2_y4gwn")
+
+[node name="Healtbar" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(64, 16)
+texture = ExtResource("3_nwph8")
+
+[node name="HpLabel" type="Label" parent="."]
+offset_left = 45.0
+offset_top = 4.0
+offset_right = 87.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100%"

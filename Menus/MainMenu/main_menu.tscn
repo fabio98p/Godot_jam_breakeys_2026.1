@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkv8tqjbut3x4"]
+
+[ext_resource type="Script" uid="uid://cjxuhaw0pt4gv" path="res://Menus/MainMenu/main_menu.gd" id="1_jf8mj"]
+[ext_resource type="PackedScene" uid="uid://cii30g83b4lg7" path="res://Menus/OprionsMenu/option_menu.tscn" id="2_p3jrs"]
+[ext_resource type="AudioStream" uid="uid://dwatbpycwuu12" path="res://Assets/Sound/Music/GameLoop2.mp3" id="3_qq57v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3jrs"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jf8mj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -14.0
+offset_right = 1175.0
+offset_bottom = 661.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3jrs")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.967882
+anchor_bottom = 0.933642
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 100
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Start" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="Option" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Option"
+
+[node name="Credits" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+
+[node name="Exit" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 88
+text = "NAME 
+OF 
+THE 
+GAME"
+horizontal_alignment = 1
+
+[node name="Option_menu" parent="." instance=ExtResource("2_p3jrs")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1174.0
+offset_bottom = 666.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qq57v")
+volume_db = -15.0
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
