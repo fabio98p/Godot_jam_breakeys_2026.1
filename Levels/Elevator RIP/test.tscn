@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://kou8dcct4hif"]
+
+[ext_resource type="Script" uid="uid://ba7hvackdwdgs" path="res://Levels/Elevator RIP/test.gd" id="1_afen0"]
+[ext_resource type="PackedScene" uid="uid://b4tcixs27lofb" path="res://Player/player.tscn" id="1_cljdu"]
+[ext_resource type="PackedScene" uid="uid://cdcs3qs3k1rrj" path="res://Levels/Elevator RIP/elevator.tscn" id="5_afen0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uvd1l"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_p4erq"]
+sky_material = SubResource("ProceduralSkyMaterial_uvd1l")
+
+[sub_resource type="Environment" id="Environment_f87w0"]
+background_mode = 2
+sky = SubResource("Sky_p4erq")
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_afen0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cljdu"]
+
+[node name="Test" type="Node3D" unique_id=837363819]
+script = ExtResource("1_afen0")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1172427154]
+environment = SubResource("Environment_f87w0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1028779736]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 1.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1505063572]
+collision_layer = 8
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=129835413]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("BoxMesh_afen0")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=145374336]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("BoxShape3D_cljdu")
+
+[node name="Player" parent="." unique_id=1176833937 instance=ExtResource("1_cljdu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3834739, 0)
+
+[node name="elevator" parent="." unique_id=929073451 instance=ExtResource("5_afen0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.764457, 0.5990901, -1.5596157)

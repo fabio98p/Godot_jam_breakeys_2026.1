@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://b7140qyes5hqc"]
+
+[ext_resource type="PackedScene" uid="uid://b4tcixs27lofb" path="res://Player/player.tscn" id="1_pjtql"]
+[ext_resource type="PackedScene" uid="uid://d0tydk8gbwd03" path="res://Levels/kitchen.tscn" id="2_bdm02"]
+[ext_resource type="PackedScene" uid="uid://td5kwru4cmbf" path="res://Assets/erba.glb" id="3_igneb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjtql"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_bdm02"]
+sky_material = SubResource("ProceduralSkyMaterial_pjtql")
+
+[sub_resource type="Environment" id="Environment_igneb"]
+background_mode = 2
+sky = SubResource("Sky_bdm02")
+tonemap_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bir38"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igneb"]
+albedo_color = Color(0, 0.36913243, 3.85046e-07, 1)
+
+[node name="MainLevel" type="Node3D" unique_id=726108182]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1888993597]
+environment = SubResource("Environment_igneb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=866992791]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=269744098]
+transform = Transform3D(30.035, 0, 0, 0, 1, 0, 0, 0, 25.02, -3.4721076, 0, -2.5073853)
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1823341827]
+shape = SubResource("BoxShape3D_bir38")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Floor" unique_id=542462643]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+material = SubResource("StandardMaterial3D_igneb")
+
+[node name="Player" parent="." unique_id=1176833937 instance=ExtResource("1_pjtql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5978563, 0)
+
+[node name="kitchen" parent="." unique_id=1458813580 instance=ExtResource("2_bdm02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.120043, 0.51581514, -8.084045)
+
+[node name="kitchen2" parent="." unique_id=543294048 instance=ExtResource("2_bdm02")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 5.9055653, 0.51581514, -11.564188)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1725396900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1581314, 0.096393704, 3.359326)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="." unique_id=339316399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.117543, 0.096393704, 3.2180986)
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="." unique_id=168628542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.382946, 0.096393704, 3.2180986)
+
+[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="." unique_id=1033305874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.358115, 0.096393704, 7.5975676)
+
+[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="." unique_id=2069823729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4145212, 0.096393704, 7.830714)
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="." unique_id=580880943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.370883, 0.096393704, 3.2180986)
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="." unique_id=1646467334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.006078, 0.096393704, 3.2180986)
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="." unique_id=1718139639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.753449, 0.096393704, 3.2180986)
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="." unique_id=2142937496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.117543, 0.096393704, 7.348588)
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="." unique_id=621978582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.370883, 0.096393704, 7.348588)
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="." unique_id=1371906984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.006078, 0.096393704, 7.348588)
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="." unique_id=97317834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.753449, 0.096393704, 7.348588)
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="." unique_id=757384934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.753449, 0.096393704, 3.2180986)
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="." unique_id=1178067529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.753449, 0.096393704, 7.348588)
+
+[node name="erba" parent="." unique_id=1183061762 instance=ExtResource("3_igneb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3939624, 0.074207306, -2.5270615)
+visible = false
