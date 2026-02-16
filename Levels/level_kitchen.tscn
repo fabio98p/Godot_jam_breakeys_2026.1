@@ -27,9 +27,10 @@ shadow_enabled = true
 directional_shadow_max_distance = 1.0
 
 [node name="elevator" parent="." unique_id=929073451 instance=ExtResource("1_p11jr")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.7645886, 0, 4.6529655)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="Player" parent="." unique_id=1176833937 instance=ExtResource("2_xpy3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7049217, 0, 4.3872232)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045441628, 0.4893993, 0.90547156)
+collision_mask = 8
 
 [node name="kitchen" parent="." unique_id=1458813580 instance=ExtResource("3_xpy3g")]

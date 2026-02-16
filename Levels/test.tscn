@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ba7hvackdwdgs" path="res://Levels/test.gd" id="1_afen0"]
 [ext_resource type="PackedScene" uid="uid://b4tcixs27lofb" path="res://Player/player.tscn" id="1_cljdu"]
-[ext_resource type="PackedScene" uid="uid://dsyhbdnqts6xp" path="res://Levels/buttons.tscn" id="2_uvd1l"]
-[ext_resource type="PackedScene" uid="uid://cc0m2jmohtil7" path="res://Assets/models/buttons_prop.gltf" id="3_p4erq"]
-[ext_resource type="PackedScene" uid="uid://dqd8e0amy0bqy" path="res://Interactible/button_interact.tscn" id="4_f87w0"]
+[ext_resource type="PackedScene" uid="uid://cdcs3qs3k1rrj" path="res://Levels/elevator.tscn" id="5_afen0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uvd1l"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,8 +20,6 @@ tonemap_mode = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cljdu"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_afen0"]
-
 [node name="Test" type="Node3D" unique_id=837363819]
 script = ExtResource("1_afen0")
 
@@ -36,6 +32,7 @@ shadow_enabled = true
 directional_shadow_max_distance = 1.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1505063572]
+collision_layer = 8
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=129835413]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
@@ -49,18 +46,5 @@ shape = SubResource("BoxShape3D_cljdu")
 [node name="Player" parent="." unique_id=1176833937 instance=ExtResource("1_cljdu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3834739, 0)
 
-[node name="buttons" parent="." unique_id=1965875626 instance=ExtResource("2_uvd1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0915189, -2.7916985)
-
-[node name="buttons_prop" parent="." unique_id=1454463418 instance=ExtResource("3_p4erq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6171017, -3.0552998)
-
-[node name="ButtonInteract" parent="." unique_id=999984681 instance=ExtResource("4_f87w0")]
-collision_layer = 257
-int_name = "cicicici"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ButtonInteract" unique_id=1907220863]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3836119, -4.203538)
-shape = SubResource("CylinderShape3D_afen0")
-
-[connection signal="interact" from="ButtonInteract" to="." method="_on_button_interact_interact"]
+[node name="elevator" parent="." unique_id=929073451 instance=ExtResource("5_afen0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.764457, 0.5990901, -1.5596157)

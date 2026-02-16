@@ -87,6 +87,8 @@ interaction={
 
 [layer_names]
 
+3d_physics/layer_1="player"
+3d_physics/layer_4="wall, ground,object"
 3d_physics/layer_9="interaction"
 
 [rendering]

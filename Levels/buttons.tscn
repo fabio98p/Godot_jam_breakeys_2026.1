@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dsyhbdnqts6xp"]
 
 [ext_resource type="PackedScene" uid="uid://cc0m2jmohtil7" path="res://Assets/models/buttons_prop.gltf" id="1_nq5gx"]
+[ext_resource type="PackedScene" uid="uid://dqd8e0amy0bqy" path="res://Interactible/button_interact.tscn" id="2_fql2c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qo1p"]
 resource_name = "Material"
@@ -682,6 +683,10 @@ shadow_mesh = SubResource("ArrayMesh_s7eso")
 height = 0.015
 radius = 0.01
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_n1pai"]
+height = 0.02
+radius = 0.02
+
 [node name="buttons" type="Node3D" unique_id=1965875626]
 
 [node name="buttons_prop" parent="." unique_id=1454463418 instance=ExtResource("1_nq5gx")]
@@ -762,7 +767,7 @@ mesh = SubResource("ArrayMesh_5mc2g")
 skeleton = NodePath("")
 metadata/extras = {
 "center_x": -0.04543264,
-"center_y": 6.5192580223083504e-09,
+"center_y": 6.519258e-09,
 "center_z": 0.0,
 "collision": "cylinder-a",
 "height": "0.015",
@@ -870,7 +875,7 @@ mesh = SubResource("ArrayMesh_itpaq")
 skeleton = NodePath("")
 metadata/extras = {
 "center_x": 0.04543264,
-"center_y": 6.5192580223083504e-09,
+"center_y": 6.519258e-09,
 "center_z": 0.0,
 "collision": "cylinder-a",
 "height": "0.015",
@@ -887,3 +892,66 @@ metadata/radius = "0.01"
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.04543264, 6.51926e-09, 0)
 shape = SubResource("CylinderShape3D_nhstd")
 debug_fill = false
+
+[node name="button1" parent="." unique_id=999984681 instance=ExtResource("2_fql2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26224393, 0)
+collision_layer = 257
+int_name = "sky"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button1" unique_id=395117643]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.04615008, -0.14325792, 0.0064657107)
+shape = SubResource("CylinderShape3D_n1pai")
+
+[node name="button2" parent="." unique_id=1967993529 instance=ExtResource("2_fql2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091617756, 0.26224393, 0)
+collision_layer = 257
+int_name = "cave"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button2" unique_id=948359315]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.04615008, -0.14325792, 0.0064657107)
+shape = SubResource("CylinderShape3D_n1pai")
+
+[node name="button3" parent="." unique_id=1486063437 instance=ExtResource("2_fql2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00027313083, 0.18307978, 0)
+collision_layer = 257
+int_name = "garden"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button3" unique_id=33104622]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.04615008, -0.14325792, 0.0064657107)
+shape = SubResource("CylinderShape3D_n1pai")
+
+[node name="button4" parent="." unique_id=210623441 instance=ExtResource("2_fql2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091344625, 0.18307978, 0)
+collision_layer = 257
+int_name = "empty"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button4" unique_id=1828037619]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.04615008, -0.14325792, 0.0064657107)
+shape = SubResource("CylinderShape3D_n1pai")
+
+[node name="button5" parent="." unique_id=545862723 instance=ExtResource("2_fql2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00027313083, 0.10358104, 0)
+collision_layer = 257
+int_name = "kitchen"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button5" unique_id=2045627350]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.04615008, -0.14325792, 0.0064657107)
+shape = SubResource("CylinderShape3D_n1pai")
+
+[node name="button6" parent="." unique_id=319526011 instance=ExtResource("2_fql2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091344625, 0.10358104, 0)
+collision_layer = 257
+int_name = "kitchen?"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button6" unique_id=873528961]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.04615008, -0.14325792, 0.0064657107)
+shape = SubResource("CylinderShape3D_n1pai")
+
+[node name="button7" parent="." unique_id=1641697972 instance=ExtResource("2_fql2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.045969293, 0.023606062, 0)
+collision_layer = 257
+int_name = "exit"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button7" unique_id=627331446]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.04615008, -0.14325792, 0.0064657107)
+shape = SubResource("CylinderShape3D_n1pai")

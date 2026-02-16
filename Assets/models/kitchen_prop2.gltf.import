@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://0x62v5ynkg5g"
-path="res://.godot/imported/elevator_prop.gltf-125150b3efddf5827529cea9a97ea520.scn"
+uid="uid://c0a4r4unhmrqs"
+path="res://.godot/imported/kitchen_prop2.gltf-684f28e0f527d93581c4dd4ad5c429b6.scn"
 
 [deps]
 
-source_file="res://Assets/models/elevator_prop.gltf"
-dest_files=["res://.godot/imported/elevator_prop.gltf-125150b3efddf5827529cea9a97ea520.scn"]
+source_file="res://Assets/models/kitchen_prop2.gltf"
+dest_files=["res://.godot/imported/kitchen_prop2.gltf-684f28e0f527d93581c4dd4ad5c429b6.scn"]
 
 [params]
 

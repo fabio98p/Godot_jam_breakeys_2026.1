@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://0x62v5ynkg5g"
-path="res://.godot/imported/elevator_prop.gltf-125150b3efddf5827529cea9a97ea520.scn"
+uid="uid://ciq4tnysgn55j"
+path="res://.godot/imported/white_room_prop.gltf-c90161ae55e2418fb11244a335d48916.scn"
 
 [deps]
 
-source_file="res://Assets/models/elevator_prop.gltf"
-dest_files=["res://.godot/imported/elevator_prop.gltf-125150b3efddf5827529cea9a97ea520.scn"]
+source_file="res://Assets/models/white_room_prop.gltf"
+dest_files=["res://.godot/imported/white_room_prop.gltf-c90161ae55e2418fb11244a335d48916.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="uid://dnvo7i8cg6iua"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
