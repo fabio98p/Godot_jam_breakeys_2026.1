@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://d0tydk8gbwd03"]
 
+[ext_resource type="PackedScene" uid="uid://bocyk42hd0blk" path="res://Assets/models/kitchen_prop1.gltf" id="1_0tg04"]
+
 [node name="kitchen" type="Node3D" unique_id=1458813580]
+
+[node name="kitchen_prop1" parent="." unique_id=1576064391 instance=ExtResource("1_0tg04")]

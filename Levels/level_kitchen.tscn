@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cdcs3qs3k1rrj" path="res://Levels/elevator.tscn" id="1_p11jr"]
 [ext_resource type="PackedScene" uid="uid://b4tcixs27lofb" path="res://Player/player.tscn" id="2_xpy3g"]
-[ext_resource type="PackedScene" uid="uid://4xm8hr2vbelb" path="res://Assets/models/kitchen_prop.gltf" id="3_xpy3g"]
+[ext_resource type="PackedScene" uid="uid://d0tydk8gbwd03" path="res://Levels/kitchen.tscn" id="3_xpy3g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p11jr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -27,8 +27,9 @@ shadow_enabled = true
 directional_shadow_max_distance = 1.0
 
 [node name="elevator" parent="." unique_id=929073451 instance=ExtResource("1_p11jr")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.7645886, 0, 4.6529655)
 
 [node name="Player" parent="." unique_id=1176833937 instance=ExtResource("2_xpy3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7049217, 0, 4.3872232)
 
-[node name="kitchen_prop" parent="." unique_id=1554202180 instance=ExtResource("3_xpy3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.987638, 0, -0.9769764)
+[node name="kitchen" parent="." unique_id=1458813580 instance=ExtResource("3_xpy3g")]
