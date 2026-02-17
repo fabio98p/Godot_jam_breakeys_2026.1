@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://br1gwjdp68rt"]
+[gd_scene format=3 uid="uid://br1gwjdp68rt"]
 
 [ext_resource type="Script" uid="uid://bd6upmargflxi" path="res://Hud/hud.gd" id="1_f4f2m"]
-[ext_resource type="PackedScene" uid="uid://bmjsv5wwroagv" path="res://Hud/Bar/bar.tscn" id="2_ngqfk"]
+[ext_resource type="Texture2D" uid="uid://dacyfcl4hkqk2" path="res://Assets/icons/cursor.png" id="2_ngqfk"]
 
-[node name="Hud" type="Control"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ngqfk"]
+texture = ExtResource("2_ngqfk")
+
+[node name="Hud" type="Control" unique_id=1988256769]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,4 +15,47 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f4f2m")
 
-[node name="Bar" parent="." instance=ExtResource("2_ngqfk")]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1162854802]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ngqfk")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1259127607]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1070391024]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=157179452]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1762073644]
+layout_mode = 2
+text = "Day:"
+
+[node name="number_of_day" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1680800807]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=549766487]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=761971900]
+layout_mode = 2
+text = "Coin: "
+
+[node name="number_of_coins" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=528928451]
+layout_mode = 2

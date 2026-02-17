@@ -1,13 +1,12 @@
 extends Control
 
-@onready var bar: Node2D = $Bar
+@onready var number_of_day: Label = $MarginContainer/VBoxContainer/HBoxContainer/number_of_day
+@onready var number_of_coins: Label = $MarginContainer/VBoxContainer/HBoxContainer2/number_of_coins
+
 
 func _ready() -> void:
-	bar.set_hp_bar_percentage(100, false)
-	await get_tree().create_timer(1).timeout
-	bar.set_hp_bar_percentage(50, false)
-	await get_tree().create_timer(1).timeout
-	bar.set_hp_bar_percentage(10, false)
-	await get_tree().create_timer(1).timeout
-	bar.set_hp_bar_percentage(0, false)
-	
+	pass
+
+func _process(delta: float) -> void:
+	number_of_day.text = str(GS.current_day)
+	number_of_coins.text = str(GS.current_coin)

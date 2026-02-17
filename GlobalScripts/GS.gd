@@ -1,6 +1,13 @@
 extends Node
 
+var current_coin: int = 500
+
 var current_day: int = 1
+
+signal show_inventory(visibility: bool)
+signal show_plant_norm_seed_interface(visibility: bool)
+signal show_plant_tree_interface(visibility: bool)
+signal show_sell_inteface(visibility: bool)
 
 signal finish_day
 

@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://by7rgxiwcxvk2"]
+[gd_scene format=3 uid="uid://cwujqf46mulrg"]
 
-[ext_resource type="Script" uid="uid://dn3dqnyx81g0t" path="res://Interactible/Bed/bed.gd" id="1_hlxns"]
-[ext_resource type="Script" uid="uid://dl481dnfv7mif" path="res://Interactible/Bed/bed_interactible.gd" id="1_q6imb"]
+[ext_resource type="Script" uid="uid://ckm3pt2nii3m7" path="res://Interactible/Shop/shop.gd" id="1_50d71"]
+[ext_resource type="Script" uid="uid://msnu7agxw45g" path="res://Interactible/Shop/shop_interactible.gd" id="2_vbgmc"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_vj0lq"]
 
@@ -9,8 +9,8 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hlxns"]
 
-[node name="Bed" type="Node3D" unique_id=130422262]
-script = ExtResource("1_hlxns")
+[node name="shop" type="Node3D" unique_id=130422262]
+script = ExtResource("1_50d71")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=14434878]
 collision_layer = 8
@@ -23,7 +23,8 @@ shape = SubResource("BoxShape3D_q6imb")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=841301574]
 collision_layer = 256
-script = ExtResource("1_q6imb")
+script = ExtResource("2_vbgmc")
+int_name = "Shop"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1092201288]
 shape = SubResource("BoxShape3D_hlxns")

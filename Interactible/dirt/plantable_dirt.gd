@@ -13,7 +13,7 @@ func _on_area_3d_interact() -> void:
 	item_planted = AXE_1
 	update_plant()
 	if item_planted == null:
-		print("plant seed")
+		GS.show_plant_norm_seed_interface
 	else:
 		print("already planted, take it first")
 

@@ -14,6 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://bripokqif4j50" path="res://Assets/models/sickle2.glb" id="7_hl710"]
 [ext_resource type="PackedScene" uid="uid://bd3c5mfmrmpp4" path="res://Assets/models/axe2.glb" id="8_d6pax"]
 [ext_resource type="PackedScene" uid="uid://by7rgxiwcxvk2" path="res://Interactible/Bed/bed.tscn" id="8_m4ar2"]
+[ext_resource type="PackedScene" uid="uid://br1gwjdp68rt" path="res://Hud/hud.tscn" id="13_wglfa"]
+[ext_resource type="PackedScene" uid="uid://cxxbtw6kle4f6" path="res://Hud/Plant_norm_seed_interface/plant_norm_seed_inteface.tscn" id="14_f8yge"]
+[ext_resource type="PackedScene" uid="uid://c4qhtb3w4o8nb" path="res://Hud/Plant_tree_interface/plant_tree_inteface.tscn" id="15_hl710"]
+[ext_resource type="PackedScene" uid="uid://ctki7we0o8i8v" path="res://Hud/Sell_interface/sell_inteface.tscn" id="16_d6pax"]
+[ext_resource type="PackedScene" uid="uid://cwujqf46mulrg" path="res://Interactible/Shop/shop.tscn" id="19_hl710"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjtql"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -124,12 +129,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.756964, 0.38301468, 3.191
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.756964, 0.38301468, 7.380192)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=39432126]
-visible = false
+
+[node name="Hud" parent="CanvasLayer" unique_id=1988256769 instance=ExtResource("13_wglfa")]
 
 [node name="Inventory" parent="CanvasLayer" unique_id=353013162 instance=ExtResource("6_82mpy")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Plant_norm_seed_inteface" parent="CanvasLayer" unique_id=332512560 instance=ExtResource("14_f8yge")]
+visible = false
+
+[node name="plant_tree_inteface" parent="CanvasLayer" unique_id=2035498318 instance=ExtResource("15_hl710")]
+visible = false
+
+[node name="sell_inteface" parent="CanvasLayer" unique_id=689759960 instance=ExtResource("16_d6pax")]
+visible = false
 
 [node name="Bed" parent="." unique_id=130422262 instance=ExtResource("8_m4ar2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.171244, 1.0000005, -0.92386043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.171244, 1.0000005, -1.7519835)
 
 [node name="CharacterBody3D" parent="." unique_id=168141513 instance=ExtResource("1_pjtql")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.214269, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6249716, 1.5687048, 0.91131043)
+
+[node name="shop" parent="." unique_id=1211752448 instance=ExtResource("19_hl710")]
+transform = Transform3D(7.1209517, 0, 0, 0, 3.6419394, 0, 0, 0, 4.309836, 5.2827797, 2.3046598, -12.520201)

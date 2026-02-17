@@ -8,6 +8,8 @@ extends CharacterBody3D
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
 
+var mouse_input: Vector2 = Vector2.ZERO
+
 const SPEED = 5.0
 const SPRINT = 8.0
 const JUMP_VELOCITY = 4.5
@@ -20,7 +22,12 @@ var t_bob = 0.0
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
-		get_tree().quit()
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		GS.show_inventory.emit(false)
+		GS.show_plant_norm_seed_interface.emit(false)
+		GS.show_plant_tree_interface.emit(false)
+		GS.show_sell_inteface.emit(false)
+		
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -53,20 +60,11 @@ func head_bobbing(time)-> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
 
-func enter_car():
-	collision.disabled = true
-	raycast.enabled = false
-	hide()
-	set_physics_process(false)
-	set_process(false)
-	camera_3d.current = false
-
-
-func leave_car():
-
-	collision.disabled = false
-	raycast.enabled = true
-	show()
-	set_physics_process(true)
-	set_process(true)
-	camera_3d.current = true
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		get_window().grab_focus()
+	
+	# Invece di ruotare subito, accumuliamo lo spostamento
+	elif event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		mouse_input += event.relative

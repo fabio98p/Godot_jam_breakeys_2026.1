@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c4qhtb3w4o8nb"]
 
-[ext_resource type="Script" uid="uid://k2t8lslusrst" path="res://Hud/Inventory/inventory.gd" id="1_m1q62"]
+[ext_resource type="Script" uid="uid://bpj11lfmaluyt" path="res://Hud/Plant_tree_interface/plant_tree_inteface.gd" id="1_jmk26"]
 
-[node name="Inventory" type="Control" unique_id=353013162]
+[node name="plant_tree_inteface" type="Control" unique_id=353013162]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,63 +11,32 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_m1q62")
+script = ExtResource("1_jmk26")
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1827534510]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1459164366]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -38.5
-offset_right = 88.0
-offset_bottom = 38.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=2062913458]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer" unique_id=2082287535]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
 columns = 5
-
-[node name="Label" type="Label" parent="GridContainer" unique_id=300396548]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label2" type="Label" parent="GridContainer" unique_id=67329617]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label3" type="Label" parent="GridContainer" unique_id=1038257170]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label4" type="Label" parent="GridContainer" unique_id=313079436]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label5" type="Label" parent="GridContainer" unique_id=178722243]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label6" type="Label" parent="GridContainer" unique_id=682802411]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label7" type="Label" parent="GridContainer" unique_id=616538018]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label8" type="Label" parent="GridContainer" unique_id=1232906720]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label9" type="Label" parent="GridContainer" unique_id=530447316]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label10" type="Label" parent="GridContainer" unique_id=1182912665]
-layout_mode = 2
-text = "ciao"
-
-[node name="Label11" type="Label" parent="GridContainer" unique_id=246273884]
-layout_mode = 2
-text = "ciao"
