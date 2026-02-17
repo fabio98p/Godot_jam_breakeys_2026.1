@@ -10,10 +10,10 @@ var models: PackedScene
 #@export var models: PackedScene
 
 func _on_area_3d_interact() -> void:
-	item_planted = AXE_1
-	update_plant()
+	#item_planted = AXE_1
+	#update_plant()
 	if item_planted == null:
-		GS.show_plant_norm_seed_interface
+		GS.show_plant_norm_seed_interface.emit(true)
 	else:
 		print("already planted, take it first")
 
