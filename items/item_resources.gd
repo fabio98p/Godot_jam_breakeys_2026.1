@@ -20,6 +20,7 @@ enum ItemType {
 		notify_property_list_changed()
 
 var next_grow_state: ItemResource
+var day_grow_state: int
 
 func _get_property_list() -> Array:
 	var properties = []
@@ -31,6 +32,11 @@ func _get_property_list() -> Array:
 			"hint": PROPERTY_HINT_RESOURCE_TYPE,
 			"hint_string": "ItemResource",
 			"usage": PROPERTY_USAGE_DEFAULT
+		})
+		properties.append({
+			"name": "day_grow_state",
+			"type": TYPE_INT,
+			"usage": PROPERTY_USAGE_DEFAULT,
 		})
 	
 	return properties
