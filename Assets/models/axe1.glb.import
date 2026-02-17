@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://2mnmfgyj1a8e"
-path="res://.godot/imported/pickaxe.gltf-0c81ca549cde732e5e9099b834bf75a9.scn"
+uid="uid://bm4oipuqcsto0"
+path="res://.godot/imported/axe1.glb-d81c5be2ea45e2d318b45d72890bc168.scn"
 
 [deps]
 
-source_file="res://Assets/models/pickaxe.gltf"
-dest_files=["res://.godot/imported/pickaxe.gltf-0c81ca549cde732e5e9099b834bf75a9.scn"]
+source_file="res://Assets/models/axe1.glb"
+dest_files=["res://.godot/imported/axe1.glb-d81c5be2ea45e2d318b45d72890bc168.scn"]
 
 [params]
 

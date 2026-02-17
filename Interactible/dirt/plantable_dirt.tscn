@@ -32,4 +32,7 @@ int_name = "select the seed"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08436298, 0)
 shape = SubResource("SphereShape3D_c506m")
 
+[node name="plant_space" type="Node3D" parent="." unique_id=1325503360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46348837, 0)
+
 [connection signal="interact" from="Area3D" to="." method="_on_area_3d_interact"]

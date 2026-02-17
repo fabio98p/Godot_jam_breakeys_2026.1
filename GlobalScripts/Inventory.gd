@@ -1,10 +1,10 @@
 extends Node
 
 var item_list: Array[ItemResource] = [
-	preload("uid://lns2ypu3wmtl"),
-	preload("uid://lns2ypu3wmtl"),
-	preload("uid://cjmng77mi8csb"),
-	preload("uid://cjmng77mi8csb")
+	preload("uid://lns2ypu3wmtl").duplicate(true),
+	preload("uid://lns2ypu3wmtl").duplicate(true),
+	preload("uid://cjmng77mi8csb").duplicate(true),
+	preload("uid://cjmng77mi8csb").duplicate(true)
 ]
 
 func get_all_items() -> Array[ItemResource]:

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b8r1o28uyyjvh" path="res://Interactible/dirt/plantable_dirt.tscn" id="4_a7er8"]
 [ext_resource type="PackedScene" uid="uid://ds4mdksnyneiy" path="res://Hud/Inventory/inventory.tscn" id="6_82mpy"]
 [ext_resource type="PackedScene" uid="uid://2mnmfgyj1a8e" path="res://Assets/models/pickaxe.gltf" id="6_qob4h"]
-[ext_resource type="PackedScene" path="res://Interactible/bed.tscn" id="8_m4ar2"]
+[ext_resource type="PackedScene" uid="uid://by7rgxiwcxvk2" path="res://Interactible/Bed/bed.tscn" id="8_m4ar2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjtql"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

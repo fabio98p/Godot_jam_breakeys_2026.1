@@ -20,7 +20,7 @@ enum ItemType {
 		notify_property_list_changed()
 
 var next_grow_state: ItemResource
-var day_grow_state: int
+var day_grow_left: int
 
 func _get_property_list() -> Array:
 	var properties = []
@@ -40,3 +40,12 @@ func _get_property_list() -> Array:
 		})
 	
 	return properties
+
+
+func has_to_grow():
+	if can_grow:
+		if day_grow_left <= 1:
+			return true
+		else:
+			day_grow_left -= 1
+	return false
