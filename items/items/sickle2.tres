@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://b6tm1ldeojw80"]
+
+[ext_resource type="Resource" uid="uid://lns2ypu3wmtl" path="res://items/items/pickaxe1.tres" id="1_s0gnh"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="2_5bxmy"]
+[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="3_hxe0b"]
+
+[resource]
+script = ExtResource("2_5bxmy")
+item_name = "pickaxe_seed"
+price = 3.0
+sprite = ExtResource("3_hxe0b")
+can_grow = true
+next_grow_state = ExtResource("1_s0gnh")
+day_grow_left = 1
+metadata/_custom_type_script = "uid://ugnopq10x11d"

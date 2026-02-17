@@ -3,10 +3,16 @@
 [ext_resource type="Script" uid="uid://dmvo3cd667807" path="res://Levels/Baita Level/main_level.gd" id="1_82mpy"]
 [ext_resource type="PackedScene" uid="uid://y8ebu5mpmgbd" path="res://Player/player.tscn" id="1_pjtql"]
 [ext_resource type="PackedScene" uid="uid://d0tydk8gbwd03" path="res://Levels/kitchen.tscn" id="2_bdm02"]
+[ext_resource type="PackedScene" uid="uid://bm4oipuqcsto0" path="res://Assets/models/axe1.glb" id="2_xsrgf"]
 [ext_resource type="PackedScene" uid="uid://td5kwru4cmbf" path="res://Assets/erba.glb" id="3_igneb"]
+[ext_resource type="PackedScene" uid="uid://dffoa7vwx4dek" path="res://Assets/models/axe3.glb" id="3_wglfa"]
 [ext_resource type="PackedScene" uid="uid://b8r1o28uyyjvh" path="res://Interactible/dirt/plantable_dirt.tscn" id="4_a7er8"]
+[ext_resource type="PackedScene" uid="uid://c850l02jjjaal" path="res://Assets/models/pickaxe2.glb" id="4_tcoee"]
+[ext_resource type="PackedScene" uid="uid://dwenpkwmb1ixc" path="res://Assets/models/pickaxe1.glb" id="5_2sug6"]
 [ext_resource type="PackedScene" uid="uid://ds4mdksnyneiy" path="res://Hud/Inventory/inventory.tscn" id="6_82mpy"]
-[ext_resource type="PackedScene" uid="uid://2mnmfgyj1a8e" path="res://Assets/models/pickaxe.gltf" id="6_qob4h"]
+[ext_resource type="PackedScene" uid="uid://cxccojtrv6jb7" path="res://Assets/models/sickle1.glb" id="6_f8yge"]
+[ext_resource type="PackedScene" uid="uid://bripokqif4j50" path="res://Assets/models/sickle2.glb" id="7_hl710"]
+[ext_resource type="PackedScene" uid="uid://bd3c5mfmrmpp4" path="res://Assets/models/axe2.glb" id="8_d6pax"]
 [ext_resource type="PackedScene" uid="uid://by7rgxiwcxvk2" path="res://Interactible/Bed/bed.tscn" id="8_m4ar2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjtql"]
@@ -46,6 +52,33 @@ shape = SubResource("BoxShape3D_bir38")
 [node name="CSGBox3D" type="CSGBox3D" parent="Floor" unique_id=542462643]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 material = SubResource("StandardMaterial3D_igneb")
+
+[node name="axe1" parent="Floor" unique_id=506495059 instance=ExtResource("2_xsrgf")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.042672686, 0.5175913, 0.16742685)
+
+[node name="axe3" parent="Floor" unique_id=985126504 instance=ExtResource("3_wglfa")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.056075443, 0.5411745, 0.1893765)
+
+[node name="pickaxe2" parent="Floor" unique_id=1240632581 instance=ExtResource("4_tcoee")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.03540791, 0.5166026, 0.16644236)
+
+[node name="pickaxe1" parent="Floor" unique_id=997340150 instance=ExtResource("5_2sug6")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.037585527, 0.5115902, 0.15245493)
+
+[node name="sickle1" parent="Floor" unique_id=1819692528 instance=ExtResource("6_f8yge")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.026312262, 0.51135635, 0.15270966)
+
+[node name="sickle2" parent="Floor" unique_id=40419581 instance=ExtResource("7_hl710")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.058140054, 0.5200097, 0.17590961)
+
+[node name="axe4" parent="Floor" unique_id=330098049 instance=ExtResource("3_wglfa")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.042309158, 0.5411745, 0.15478647)
+
+[node name="axe2" parent="Floor" unique_id=1185702145 instance=ExtResource("8_d6pax")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.054766115, 0.52004886, 0.16288978)
+
+[node name="axe5" parent="Floor" unique_id=1057549572 instance=ExtResource("2_xsrgf")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.050606497, 0.51759136, 0.15677162)
 
 [node name="kitchen" parent="." unique_id=1458813580 instance=ExtResource("2_bdm02")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.120043, 0.51581514, -8.084045)
@@ -89,9 +122,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.756964, 0.38301468, 3.191
 
 [node name="Plantable_dirt8" parent="." unique_id=1375833182 instance=ExtResource("4_a7er8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.756964, 0.38301468, 7.380192)
-
-[node name="pickaxe" parent="." unique_id=1167946532 instance=ExtResource("6_qob4h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.551559, 0.8632479, 3.1938639)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=39432126]
 visible = false

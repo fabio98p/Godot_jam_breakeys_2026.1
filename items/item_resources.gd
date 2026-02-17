@@ -34,7 +34,7 @@ func _get_property_list() -> Array:
 			"usage": PROPERTY_USAGE_DEFAULT
 		})
 		properties.append({
-			"name": "day_grow_state",
+			"name": "day_grow_left",
 			"type": TYPE_INT,
 			"usage": PROPERTY_USAGE_DEFAULT,
 		})

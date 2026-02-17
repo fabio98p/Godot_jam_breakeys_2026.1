@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://dilgaw6b68pmx"]
+
+[ext_resource type="PackedScene" uid="uid://bm4oipuqcsto0" path="res://Assets/models/axe1.glb" id="1_2l3f5"]
+[ext_resource type="Resource" uid="uid://ccgknwl5umg0" path="res://items/items/axe2.tres" id="1_me3gk"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="2_p0ysu"]
+[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="4_k4inx"]
+
+[resource]
+script = ExtResource("2_p0ysu")
+item_name = "axe1"
+price = 3.0
+model = ExtResource("1_2l3f5")
+sprite = ExtResource("4_k4inx")
+can_grow = true
+next_grow_state = ExtResource("1_me3gk")
+day_grow_left = 1
+metadata/_custom_type_script = "uid://ugnopq10x11d"

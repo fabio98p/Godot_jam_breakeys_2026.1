@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://0cdgxul4cgb1"]
+
+[ext_resource type="PackedScene" uid="uid://c850l02jjjaal" path="res://Assets/models/pickaxe2.glb" id="1_0tmcp"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="2_e057v"]
+[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="3_h8vyg"]
+
+[resource]
+script = ExtResource("2_e057v")
+item_name = "pickaxe"
+price = 5.0
+model = ExtResource("1_0tmcp")
+sprite = ExtResource("3_h8vyg")
+takeable_from_dirt = true
+metadata/_custom_type_script = "uid://ugnopq10x11d"
