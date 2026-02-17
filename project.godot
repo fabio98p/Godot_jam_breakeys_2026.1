@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Godot_jam_breakeys_2026.1"
-run/main_scene="uid://bkv8tqjbut3x4"
+run/main_scene="uid://b7140qyes5hqc"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
