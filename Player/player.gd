@@ -7,12 +7,15 @@ extends CharacterBody3D
 var top_visibility_head = 60
 var bottom_visibility_head = -80
 
+var mouse_input: Vector2 = Vector2.ZERO
+
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
 @onready var ray_cast_3d: RayCast3D = $Head/RayCast3D
 
 func _ready() -> void:
 	ray_cast_3d
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -44,11 +47,20 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		get_window().grab_focus()
-		
-	elif event is InputEventMouseMotion:
-		rotation.y -= event.relative.x * sensivity
-		head.rotation.x -= event.relative.y * sensivity
-		head.rotation_degrees.x = clamp(head.rotation_degrees.x, bottom_visibility_head, top_visibility_head)
+	
+	# Invece di ruotare subito, accumuliamo lo spostamento
+	elif event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		mouse_input += event.relative
 
-	# Print the size of the viewport.
-	# print("Viewport Resolution is: ", get_viewport().get_visible_rect().size)
+func _process(delta: float) -> void:
+	if mouse_input.length() > 0:
+		# Applichiamo la rotazione usando delta per renderla indipendente dal framerate
+		# Nota: la sensibilità potrebbe dover essere alzata rispetto a prima
+		rotation.y -= mouse_input.x * sensivity
+		head.rotation.x -= mouse_input.y * sensivity
+		
+		# Clamp della testa
+		head.rotation_degrees.x = clamp(head.rotation_degrees.x, bottom_visibility_head, top_visibility_head)
+		
+		# RESET fondamentale: svuotiamo l'accumulatore per il prossimo frame
+		mouse_input = Vector2.ZERO

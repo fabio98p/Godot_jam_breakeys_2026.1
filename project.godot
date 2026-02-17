@@ -104,6 +104,11 @@ inventory={
 3d_physics/layer_4="wall, ground,object"
 3d_physics/layer_9="interaction"
 
+[physics]
+
+common/physics_ticks_per_second=120
+common/physics_interpolation=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

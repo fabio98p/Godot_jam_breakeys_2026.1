@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmcdinpwrfac3" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://bgjou6e16rsc1" path="res://Player/ray_cast_3d.gd" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://bthbw3b7ykhgs" path="res://Player/head.gd" id="2_btcbx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l8h54"]
 radius = 0.2
@@ -23,6 +24,7 @@ mesh = SubResource("CapsuleMesh_hvfyp")
 
 [node name="Head" type="Node3D" parent="." unique_id=113185391]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+script = ExtResource("2_btcbx")
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=632941279]
 
