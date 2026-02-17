@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b8r1o28uyyjvh"]
+
+[ext_resource type="Script" uid="uid://drb6s50av66kr" path="res://Interactible/dirt/dirt_interaction.gd" id="1_41vxk"]
+[ext_resource type="Script" uid="uid://cidxcmj6r8l14" path="res://Interactible/dirt/plantable_dirt.gd" id="1_n6lg7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n6lg7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jol06"]
+albedo_color = Color(0.38563094, 0.17946869, 0.033060964, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c506m"]
+radius = 0.2
+
+[node name="Plantable_dirt" type="Node3D" unique_id=780328294]
+script = ExtResource("1_n6lg7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1670731565]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2064661523]
+shape = SubResource("SphereShape3D_n6lg7")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="StaticBody3D" unique_id=805721572]
+material = SubResource("StandardMaterial3D_jol06")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=37690805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5277839, 0)
+collision_layer = 256
+script = ExtResource("1_41vxk")
+int_name = "select the seed"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1235062991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08436298, 0)
+shape = SubResource("SphereShape3D_c506m")
+
+[connection signal="interact" from="Area3D" to="." method="_on_area_3d_interact"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://cjmng77mi8csb"]
+
+[ext_resource type="Resource" uid="uid://lns2ypu3wmtl" path="res://items/items/pickaxe.tres" id="1_0ggmh"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="1_22jkv"]
+
+[resource]
+script = ExtResource("1_22jkv")
+item_name = "pickaxe_seed"
+price = 3.0
+can_grow = true
+next_grow_state = ExtResource("1_0ggmh")
+metadata/_custom_type_script = "uid://ugnopq10x11d"

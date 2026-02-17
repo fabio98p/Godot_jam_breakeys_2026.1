@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://b7140qyes5hqc"]
 
+[ext_resource type="Script" uid="uid://dmvo3cd667807" path="res://Levels/Baita Level/main_level.gd" id="1_82mpy"]
 [ext_resource type="PackedScene" uid="uid://b4tcixs27lofb" path="res://Player/player.tscn" id="1_pjtql"]
 [ext_resource type="PackedScene" uid="uid://d0tydk8gbwd03" path="res://Levels/kitchen.tscn" id="2_bdm02"]
 [ext_resource type="PackedScene" uid="uid://td5kwru4cmbf" path="res://Assets/erba.glb" id="3_igneb"]
+[ext_resource type="PackedScene" uid="uid://b8r1o28uyyjvh" path="res://Interactible/dirt/plantable_dirt.tscn" id="4_a7er8"]
+[ext_resource type="PackedScene" uid="uid://ds4mdksnyneiy" path="res://Hud/Inventory/inventory.tscn" id="6_82mpy"]
+[ext_resource type="PackedScene" uid="uid://2mnmfgyj1a8e" path="res://Assets/models/pickaxe.gltf" id="6_qob4h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjtql"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,6 +26,7 @@ tonemap_mode = 2
 albedo_color = Color(0, 0.36913243, 3.85046e-07, 1)
 
 [node name="MainLevel" type="Node3D" unique_id=726108182]
+script = ExtResource("1_82mpy")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1888993597]
 environment = SubResource("Environment_igneb")
@@ -53,45 +58,44 @@ transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 5.9055653, 0.51581514, -1
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1725396900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1581314, 0.096393704, 3.359326)
 
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="." unique_id=339316399]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.117543, 0.096393704, 3.2180986)
-
 [node name="CSGCylinder3D12" type="CSGCylinder3D" parent="." unique_id=168628542]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.382946, 0.096393704, 3.2180986)
 
 [node name="CSGCylinder3D13" type="CSGCylinder3D" parent="." unique_id=1033305874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.358115, 0.096393704, 7.5975676)
 
-[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="." unique_id=2069823729]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4145212, 0.096393704, 7.830714)
-
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="." unique_id=580880943]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.370883, 0.096393704, 3.2180986)
-
-[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="." unique_id=1646467334]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.006078, 0.096393704, 3.2180986)
-
-[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="." unique_id=1718139639]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.753449, 0.096393704, 3.2180986)
-
-[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="." unique_id=2142937496]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.117543, 0.096393704, 7.348588)
-
-[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="." unique_id=621978582]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.370883, 0.096393704, 7.348588)
-
-[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="." unique_id=1371906984]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.006078, 0.096393704, 7.348588)
-
-[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="." unique_id=97317834]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.753449, 0.096393704, 7.348588)
-
-[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="." unique_id=757384934]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.753449, 0.096393704, 3.2180986)
-
-[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="." unique_id=1178067529]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.753449, 0.096393704, 7.348588)
-
 [node name="erba" parent="." unique_id=1183061762 instance=ExtResource("3_igneb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3939624, 0.074207306, -2.5270615)
 visible = false
+
+[node name="Plantable_dirt" parent="." unique_id=780328294 instance=ExtResource("4_a7er8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1291275, 0.38301468, 3.1911106)
+
+[node name="Plantable_dirt2" parent="." unique_id=1907243758 instance=ExtResource("4_a7er8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1291275, 0.38301468, 7.380192)
+
+[node name="Plantable_dirt3" parent="." unique_id=1219901438 instance=ExtResource("4_a7er8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.393652, 0.38301468, 3.1911106)
+
+[node name="Plantable_dirt4" parent="." unique_id=1649264017 instance=ExtResource("4_a7er8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.393652, 0.38301468, 7.380192)
+
+[node name="Plantable_dirt5" parent="." unique_id=468092067 instance=ExtResource("4_a7er8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.002493, 0.38301468, 3.1911106)
+
+[node name="Plantable_dirt6" parent="." unique_id=1635910650 instance=ExtResource("4_a7er8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.002493, 0.38301468, 7.380192)
+
+[node name="Plantable_dirt7" parent="." unique_id=1248900389 instance=ExtResource("4_a7er8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.756964, 0.38301468, 3.1911106)
+
+[node name="Plantable_dirt8" parent="." unique_id=1375833182 instance=ExtResource("4_a7er8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.756964, 0.38301468, 7.380192)
+
+[node name="pickaxe" parent="." unique_id=1167946532 instance=ExtResource("6_qob4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.551559, 0.6417979, 3.1938639)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=39432126]
+visible = false
+
+[node name="Inventory" parent="CanvasLayer" unique_id=353013162 instance=ExtResource("6_82mpy")]
