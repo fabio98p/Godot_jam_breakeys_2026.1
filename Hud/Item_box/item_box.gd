@@ -1,20 +1,22 @@
 extends Control
-@onready var icon: Sprite2D = $icon
-@onready var label: Label = $Label
-var description: String
-var icon_sprite: Texture2D
+@onready var icon_sprite_2d: Sprite2D = $icon_sprite2d
+@onready var description_label: Label = $DescriptionLabel
+@onready var button: Button = $Button
 
-func _ready() -> void:
-	icon.texture = icon_sprite
-	label.visible = false
+func update_item_box(desc: String, icon_sprite: Texture2D, button_are_disabled: bool = true):
+	icon_sprite_2d.texture = icon_sprite
+	description_label.text = desc
+	description_label.visible = false
+	
+	button.disabled = button_are_disabled
+	
+	
 
 func _on_button_pressed() -> void:
 	print("seell items?")
 
-
 func _on_button_mouse_entered() -> void:
-	label.visible = true
-
+	description_label.visible = true
 
 func _on_button_mouse_exited() -> void:
-	label.visible = false
+	description_label.visible = false

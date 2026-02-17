@@ -2,11 +2,13 @@
 
 [ext_resource type="Resource" uid="uid://lns2ypu3wmtl" path="res://items/items/pickaxe.tres" id="1_0ggmh"]
 [ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="1_22jkv"]
+[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="3_jqyi2"]
 
 [resource]
 script = ExtResource("1_22jkv")
 item_name = "pickaxe_seed"
 price = 3.0
+sprite = ExtResource("3_jqyi2")
 can_grow = true
 next_grow_state = ExtResource("1_0ggmh")
 metadata/_custom_type_script = "uid://ugnopq10x11d"

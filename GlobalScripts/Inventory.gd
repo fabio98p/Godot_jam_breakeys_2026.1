@@ -1,6 +1,11 @@
 extends Node
 
-var item_list: Array[ItemResource]
+var item_list: Array[ItemResource] = [
+	preload("uid://lns2ypu3wmtl"),
+	preload("uid://lns2ypu3wmtl"),
+	preload("uid://cjmng77mi8csb"),
+	preload("uid://cjmng77mi8csb")
+]
 
 func get_all_items() -> Array[ItemResource]:
 	return item_list

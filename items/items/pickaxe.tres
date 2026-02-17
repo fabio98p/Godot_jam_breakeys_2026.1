@@ -7,6 +7,7 @@
 script = ExtResource("1_ti51n")
 item_name = "pickaxe"
 price = 5.0
+type = 2
 sprite = ExtResource("2_laxil")
 takeable_from_dirt = true
 metadata/_custom_type_script = "uid://ugnopq10x11d"

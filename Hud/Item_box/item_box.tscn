@@ -17,7 +17,7 @@ script = ExtResource("1_su6rw")
 position = Vector2(24, 24)
 texture = ExtResource("2_f06hb")
 
-[node name="icon" type="Sprite2D" parent="." unique_id=1539634978]
+[node name="icon_sprite2d" type="Sprite2D" parent="." unique_id=1539634978]
 position = Vector2(24, 24)
 texture = ExtResource("3_slffc")
 
@@ -28,8 +28,9 @@ offset_top = 8.0
 offset_right = 30.821802
 offset_bottom = 30.463255
 scale = Vector2(1.402168, 1.4245487)
+disabled = true
 
-[node name="Label" type="Label" parent="." unique_id=1568070542]
+[node name="DescriptionLabel" type="Label" parent="." unique_id=1568070542]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
