@@ -7,7 +7,6 @@ extends Node3D
 
 func _ready() -> void:
 	GS.show_inventory.connect(show_inventory)
-	GS.show_plant_norm_seed_interface.connect(show_plant_norm_seed_interface)
 	GS.show_plant_tree_interface.connect(show_plant_tree_interface)
 	GS.show_sell_inteface.connect(show_sell_inteface)
 
@@ -17,9 +16,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func show_inventory(visibility):
 	inventory.visible = visibility
-
-func show_plant_norm_seed_interface(visibility):
-	plant_norm_seed_inteface.visible = visibility
 
 func show_plant_tree_interface(visibility):
 	plant_tree_inteface.visible = visibility

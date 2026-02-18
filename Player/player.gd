@@ -20,39 +20,54 @@ const BOB_FREQ = 3
 const BOB_AMP = 0.02
 var t_bob = 0.0
 
+var stop_player: bool = false
+func _ready() -> void:
+	GS.show_inventory.connect(player_stopped)
+	GS.show_plant_norm_seed_interface.connect(player_stopped)
+	GS.show_plant_tree_interface.connect(player_stopped)
+	GS.show_sell_inteface.connect(player_stopped)
+
+func player_stopped(stopped, dirt):
+	stop_player = stopped
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		GS.show_inventory.emit(false)
-		GS.show_plant_norm_seed_interface.emit(false)
-		GS.show_plant_tree_interface.emit(false)
-		GS.show_sell_inteface.emit(false)
-		
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-	# WASD movement vector
-	var input_dir := Input.get_vector("left", "right", "forward", "back")
-	
-	# super basic locomotion
-	var new_velocity = Vector2.ZERO
-	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0.0, input_dir.y)).normalized()
-	if direction:
-		if Input.is_action_pressed("sprint"):
-			velocity.x = direction.x * SPRINT
-			velocity.z = direction.z * SPRINT
+		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		else:
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
-	else:
-		velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 9)
-		velocity.z = lerp(velocity.z, direction.x * SPEED, delta * 9)
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		#GS.show_inventory.emit(false)
+		#GS.show_plant_norm_seed_interface.emit(false)
+		#GS.show_plant_tree_interface.emit(false)
+		#GS.show_sell_inteface.emit(false)
+	
+	if !stop_player:
+		# Add the gravity.
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+		# WASD movement vector
+		var input_dir := Input.get_vector("left", "right", "forward", "back")
 		
-	#head bobbing
-	t_bob += delta * velocity.length() * float(is_on_floor())
-	camera_3d.transform.origin = head_bobbing(t_bob)
+		# super basic locomotion
+		var new_velocity = Vector2.ZERO
+		var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0.0, input_dir.y)).normalized()
+		if direction:
+			if Input.is_action_pressed("sprint"):
+				velocity.x = direction.x * SPRINT
+				velocity.z = direction.z * SPRINT
+			else:
+				velocity.x = direction.x * SPEED
+				velocity.z = direction.z * SPEED
+		else:
+			velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 9)
+			velocity.z = lerp(velocity.z, direction.x * SPEED, delta * 9)
+			
+		#head bobbing
+		t_bob += delta * velocity.length() * float(is_on_floor())
+		camera_3d.transform.origin = head_bobbing(t_bob)
 
-	move_and_slide()
+		move_and_slide()
 
 func head_bobbing(time)-> Vector3:
 	var pos = Vector3.ZERO
@@ -60,11 +75,11 @@ func head_bobbing(time)-> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		get_window().grab_focus()
-	
-	# Invece di ruotare subito, accumuliamo lo spostamento
-	elif event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		mouse_input += event.relative
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event is InputEventMouseButton:
+		#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		#get_window().grab_focus()
+	#
+	## Invece di ruotare subito, accumuliamo lo spostamento
+	#elif event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		#mouse_input += event.relative

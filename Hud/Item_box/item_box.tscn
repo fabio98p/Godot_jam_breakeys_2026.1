@@ -4,38 +4,49 @@
 [ext_resource type="Texture2D" uid="uid://cjo8tlux8q3il" path="res://Assets/upgrade_base.png" id="2_f06hb"]
 [ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="3_slffc"]
 
-[node name="ItemBox" type="Control" unique_id=728607137]
-layout_mode = 3
-anchors_preset = 15
+[node name="ItemBox" type="MarginContainer" unique_id=1251319554]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 328.0
+offset_top = 240.0
+offset_right = -792.0
+offset_bottom = -376.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_su6rw")
 
-[node name="background" type="Sprite2D" parent="." unique_id=1218399184]
-position = Vector2(24, 24)
+[node name="Control" type="Control" parent="." unique_id=110957605]
+layout_mode = 2
+
+[node name="background" type="Sprite2D" parent="Control" unique_id=1218399184]
+position = Vector2(16, 16)
 texture = ExtResource("2_f06hb")
 
-[node name="icon_sprite2d" type="Sprite2D" parent="." unique_id=1539634978]
-position = Vector2(24, 24)
+[node name="icon_sprite2d" type="Sprite2D" parent="Control" unique_id=1539634978]
+unique_name_in_owner = true
+position = Vector2(16, 16)
 texture = ExtResource("3_slffc")
 
-[node name="Button" type="Button" parent="." unique_id=1372633433]
+[node name="Button" type="Button" parent="Control" unique_id=1372633433]
+unique_name_in_owner = true
+z_index = 10
 layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 30.821802
-offset_bottom = 30.463255
-scale = Vector2(1.402168, 1.4245487)
+offset_right = 32.0
+offset_bottom = 32.0
 disabled = true
 
-[node name="DescriptionLabel" type="Label" parent="." unique_id=1568070542]
+[node name="DescriptionLabel" type="Label" parent="Control" unique_id=1568070542]
+unique_name_in_owner = true
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 59.0
+offset_bottom = -9.0
 text = "ciaooooooo"
+horizontal_alignment = 1
 
-[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
-[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Control/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
