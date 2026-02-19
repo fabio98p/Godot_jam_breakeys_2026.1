@@ -3,22 +3,16 @@ extends Node3D
 var item_planted: ItemResource
 var dirt_wet: bool = false
 @onready var plant_space: Node3D = $plant_space
-const PICKAXE = preload("uid://lns2ypu3wmtl")
-const AXE_1 = preload("uid://dilgaw6b68pmx")
 
 var models: PackedScene
-#@export var models: PackedScene
 
 func _on_area_3d_interact() -> void:
-	#item_planted = AXE_1
-	#update_plant()
 	if item_planted == null:
 		GS.show_plant_norm_seed_interface.emit(true, self)
 	else:
 		print("already planted, take it first")
 
 func plant_seed(seed: ItemResource):
-	print(item_planted.item_name)
 	item_planted = seed
 	update_plant()
 
