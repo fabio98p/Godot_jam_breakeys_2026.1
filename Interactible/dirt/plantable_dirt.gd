@@ -18,7 +18,9 @@ func _on_area_3d_interact() -> void:
 		print("already planted, take it first")
 
 func plant_seed(seed: ItemResource):
+	print(item_planted.item_name)
 	item_planted = seed
+	update_plant()
 
 func _ready():
 	GS.finish_day.connect(_on_finish_day)

@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://w4tl4av3o4we" path="res://Hud/Item_box/item_box.gd" id="1_su6rw"]
 [ext_resource type="Texture2D" uid="uid://cjo8tlux8q3il" path="res://Assets/upgrade_base.png" id="2_f06hb"]
 [ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="3_slffc"]
+[ext_resource type="Script" uid="uid://u1vrsq3tpfx4" path="res://Hud/Item_box/button.gd" id="4_f06hb"]
 
 [node name="ItemBox" type="MarginContainer" unique_id=1251319554]
 custom_minimum_size = Vector2(32, 32)
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 328.0
@@ -36,6 +37,7 @@ layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
 disabled = true
+script = ExtResource("4_f06hb")
 
 [node name="DescriptionLabel" type="Label" parent="Control" unique_id=1568070542]
 unique_name_in_owner = true
@@ -50,3 +52,5 @@ horizontal_alignment = 1
 [connection signal="mouse_entered" from="Control/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]
+[connection signal="pressed_and_return_item" from="Control/Button" to="." method="_on_button_pressed_and_return_item"]

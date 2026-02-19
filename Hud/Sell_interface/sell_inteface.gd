@@ -24,5 +24,5 @@ func _ready() -> void:
 	for item in buy_list:
 		var item_box = ITEM_BOX.instantiate()
 		buy_container.add_child(item_box)
-		item_box.update_item_box(item.item_name, item.sprite, true)
+		item_box.update_item_box(item, true)
 	

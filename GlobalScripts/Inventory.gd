@@ -1,10 +1,12 @@
 extends Node
+const AXE_SEED = preload("uid://c3sxrr8mi2fet")
+const PICKAXE_SEED = preload("uid://cjmng77mi8csb")
+const SICKLE_SEED = preload("uid://d0vu6r8b4pqkx")
 
 var item_list: Array[ItemResource] = [
-	preload("uid://lns2ypu3wmtl").duplicate(true),
-	preload("uid://lns2ypu3wmtl").duplicate(true),
-	preload("uid://cjmng77mi8csb").duplicate(true),
-	preload("uid://cjmng77mi8csb").duplicate(true)
+	AXE_SEED,
+	PICKAXE_SEED,
+	SICKLE_SEED,
 ]
 
 func get_all_items() -> Array[ItemResource]:

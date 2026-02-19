@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c0a4r4unhmrqs"
-path="res://.godot/imported/kitchen_prop2.gltf-684f28e0f527d93581c4dd4ad5c429b6.scn"
+valid=false
 
 [deps]
 
 source_file="res://Assets/models/kitchen_prop2.gltf"
-dest_files=["res://.godot/imported/kitchen_prop2.gltf-684f28e0f527d93581c4dd4ad5c429b6.scn"]
 
 [params]
 

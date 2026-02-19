@@ -10,14 +10,17 @@ func _ready() -> void:
 	for item in item_list:
 		var item_box = ITEM_BOX.instantiate()
 		grid_container.add_child(item_box)
-		item_box.update_item_box(item.item_name, item.sprite, false)
+		item_box.update_item_box(item, false)
 		
 func _on_exit_button_pressed() -> void:
 	GS.show_plant_norm_seed_interface.emit(false, self)
 
 func show_plant_norm_seed_interface(state, dirt):
 	visible = state
-	selected_dirt = dirt
+	if dirt:
+		selected_dirt = dirt
 
 func plant_selected_seed(seed: ItemResource):
+	print(seed.item_name)
+
 	selected_dirt.plant_seed(seed)
