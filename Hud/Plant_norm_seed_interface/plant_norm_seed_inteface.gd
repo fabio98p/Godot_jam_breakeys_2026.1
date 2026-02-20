@@ -6,12 +6,20 @@ var selected_dirt: Node
 
 func _ready() -> void:
 	GS.show_plant_norm_seed_interface.connect(show_plant_norm_seed_interface)
+	update_item_list()
+	GS.update_all_interface.connect(update_item_list)
+
+func update_item_list():
 	var item_list: Array[ItemResource] = Inventory.get_norm_seed()
+	
+	for item_box in grid_container.get_children():
+		item_box.queue_free()
+	
 	for item in item_list:
 		var item_box = ITEM_BOX.instantiate()
 		grid_container.add_child(item_box)
 		item_box.update_item_box(item, false)
-		
+	
 func _on_exit_button_pressed() -> void:
 	GS.show_plant_norm_seed_interface.emit(false, self)
 
@@ -21,6 +29,7 @@ func show_plant_norm_seed_interface(state, dirt):
 		selected_dirt = dirt
 
 func plant_selected_seed(seed: ItemResource):
-	print(seed.item_name)
-
 	selected_dirt.plant_seed(seed)
+	Inventory.remove_item_from_list(seed)
+	update_item_list()
+	

@@ -8,6 +8,7 @@
 script = ExtResource("2_e057v")
 item_name = "pickaxe"
 price = 5.0
+type = 2
 model = ExtResource("1_0tmcp")
 sprite = ExtResource("3_h8vyg")
 takeable_from_dirt = true

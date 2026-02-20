@@ -151,5 +151,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.171244, 1.0000005, -1.7519
 [node name="CharacterBody3D" parent="." unique_id=168141513 instance=ExtResource("1_pjtql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6249716, 1.5687048, 0.91131043)
 
+[node name="CharacterBody3D" parent="CharacterBody3D" unique_id=1444988572 instance=ExtResource("1_pjtql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6249716, 1.5687048, 0.91131043)
+
 [node name="shop" parent="." unique_id=1211752448 instance=ExtResource("19_hl710")]
 transform = Transform3D(7.1209517, 0, 0, 0, 3.6419394, 0, 0, 0, 4.309836, 5.2827797, 2.3046598, -12.520201)

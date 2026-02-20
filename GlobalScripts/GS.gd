@@ -9,6 +9,7 @@ signal show_plant_norm_seed_interface(visibility: bool, dirt: Node)
 signal show_plant_tree_interface(visibility: bool)
 signal show_sell_inteface(visibility: bool)
 
+signal update_all_interface
 signal finish_day
 
 func _ready():
@@ -25,7 +26,7 @@ func _on_finish_day():
 
 
 
-func change_mouse_state(state: bool, dirt):
+func change_mouse_state(state: bool, dirt = ""):
 	if state:
 		# MODALITÀ MENU
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

@@ -8,6 +8,7 @@
 script = ExtResource("2_phmwx")
 item_name = "axe3"
 price = 3.0
+type = 2
 model = ExtResource("1_phmwx")
 sprite = ExtResource("3_nr2lm")
 takeable_from_dirt = true

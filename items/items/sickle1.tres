@@ -9,6 +9,7 @@
 script = ExtResource("2_tgqye")
 item_name = "sickle1"
 price = 3.0
+type = 2
 model = ExtResource("1_tgqye")
 sprite = ExtResource("3_hg8l8")
 takeable_from_dirt = true

@@ -9,6 +9,7 @@
 script = ExtResource("2_2ln5q")
 item_name = "axe2"
 price = 3.0
+type = 2
 model = ExtResource("1_qi2k7")
 sprite = ExtResource("4_a4k56")
 can_grow = true
