@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://c4qhtb3w4o8nb" path="res://Hud/Plant_tree_interface/plant_tree_inteface.tscn" id="15_hl710"]
 [ext_resource type="PackedScene" uid="uid://ctki7we0o8i8v" path="res://Hud/Sell_interface/sell_inteface.tscn" id="16_d6pax"]
 [ext_resource type="PackedScene" uid="uid://cwujqf46mulrg" path="res://Interactible/Shop/shop.tscn" id="19_hl710"]
+[ext_resource type="PackedScene" uid="uid://bnmtyoil0x770" path="res://Assets/models/cabin.glb" id="20_d6pax"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjtql"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -151,8 +152,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.171244, 1.0000005, -1.7519
 [node name="CharacterBody3D" parent="." unique_id=168141513 instance=ExtResource("1_pjtql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6249716, 1.5687048, 0.91131043)
 
-[node name="CharacterBody3D" parent="CharacterBody3D" unique_id=1444988572 instance=ExtResource("1_pjtql")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6249716, 1.5687048, 0.91131043)
-
 [node name="shop" parent="." unique_id=1211752448 instance=ExtResource("19_hl710")]
 transform = Transform3D(7.1209517, 0, 0, 0, 3.6419394, 0, 0, 0, 4.309836, 5.2827797, 2.3046598, -12.520201)
+
+[node name="cabin" parent="." unique_id=1809721730 instance=ExtResource("20_d6pax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.33024, 0.5, -9.637777)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="cabin" unique_id=1906949955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9096828, 0)
+light_color = Color(0.7746089, 0.77438325, 3.85046e-07, 1)
+light_energy = 1.842
