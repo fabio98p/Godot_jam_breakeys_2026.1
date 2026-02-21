@@ -2,25 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dmvo3cd667807" path="res://Levels/Baita Level/main_level.gd" id="1_82mpy"]
 [ext_resource type="PackedScene" uid="uid://y8ebu5mpmgbd" path="res://Player/player.tscn" id="1_pjtql"]
-[ext_resource type="PackedScene" uid="uid://d0tydk8gbwd03" path="res://Levels/kitchen.tscn" id="2_bdm02"]
-[ext_resource type="PackedScene" uid="uid://bm4oipuqcsto0" path="res://Assets/models/axe1.glb" id="2_xsrgf"]
-[ext_resource type="PackedScene" uid="uid://td5kwru4cmbf" path="res://Assets/erba.glb" id="3_igneb"]
-[ext_resource type="PackedScene" uid="uid://dffoa7vwx4dek" path="res://Assets/models/axe3.glb" id="3_wglfa"]
+[ext_resource type="PackedScene" uid="uid://by7pmkofgujqi" path="res://Assets/models/cabinFINE.glb" id="2_75t1q"]
 [ext_resource type="PackedScene" uid="uid://b8r1o28uyyjvh" path="res://Interactible/dirt/plantable_dirt.tscn" id="4_a7er8"]
-[ext_resource type="PackedScene" uid="uid://c850l02jjjaal" path="res://Assets/models/pickaxe2.glb" id="4_tcoee"]
-[ext_resource type="PackedScene" uid="uid://dwenpkwmb1ixc" path="res://Assets/models/pickaxe1.glb" id="5_2sug6"]
 [ext_resource type="PackedScene" uid="uid://ds4mdksnyneiy" path="res://Hud/Inventory/inventory.tscn" id="6_82mpy"]
-[ext_resource type="PackedScene" uid="uid://cxccojtrv6jb7" path="res://Assets/models/sickle1.glb" id="6_f8yge"]
-[ext_resource type="PackedScene" uid="uid://bripokqif4j50" path="res://Assets/models/sickle2.glb" id="7_hl710"]
-[ext_resource type="PackedScene" uid="uid://bd3c5mfmrmpp4" path="res://Assets/models/axe2.glb" id="8_d6pax"]
-[ext_resource type="PackedScene" uid="uid://by7rgxiwcxvk2" path="res://Interactible/Bed/bed.tscn" id="8_m4ar2"]
+[ext_resource type="PackedScene" uid="uid://bu143vv81fge1" path="res://Interactible/dirt_tree/plantable_dirt_tree.tscn" id="9_oylvt"]
 [ext_resource type="PackedScene" uid="uid://br1gwjdp68rt" path="res://Hud/hud.tscn" id="13_wglfa"]
 [ext_resource type="PackedScene" uid="uid://cxxbtw6kle4f6" path="res://Hud/Plant_norm_seed_interface/plant_norm_seed_inteface.tscn" id="14_f8yge"]
 [ext_resource type="PackedScene" uid="uid://c4qhtb3w4o8nb" path="res://Hud/Plant_tree_interface/plant_tree_inteface.tscn" id="15_hl710"]
 [ext_resource type="PackedScene" uid="uid://ctki7we0o8i8v" path="res://Hud/Sell_interface/sell_inteface.tscn" id="16_d6pax"]
 [ext_resource type="PackedScene" uid="uid://cwujqf46mulrg" path="res://Interactible/Shop/shop.tscn" id="19_hl710"]
-[ext_resource type="PackedScene" uid="uid://bnmtyoil0x770" path="res://Assets/models/cabin.glb" id="20_d6pax"]
-[ext_resource type="PackedScene" uid="uid://dwgwgl40lw8t2" path="res://Assets/models/cabin2.glb" id="21_qp13o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjtql"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -60,57 +50,22 @@ shape = SubResource("BoxShape3D_bir38")
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 material = SubResource("StandardMaterial3D_igneb")
 
-[node name="axe1" parent="Floor" unique_id=506495059 instance=ExtResource("2_xsrgf")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.042672686, 0.5175913, 0.16742685)
+[node name="cabinFINE" parent="Floor" unique_id=316311193 instance=ExtResource("2_75t1q")]
+transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, -0.3317222, 0.5427028, -0.28494066)
 
-[node name="axe3" parent="Floor" unique_id=985126504 instance=ExtResource("3_wglfa")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.056075443, 0.5411745, 0.1893765)
-
-[node name="pickaxe2" parent="Floor" unique_id=1240632581 instance=ExtResource("4_tcoee")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.03540791, 0.5166026, 0.16644236)
-
-[node name="pickaxe1" parent="Floor" unique_id=997340150 instance=ExtResource("5_2sug6")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.037585527, 0.5115902, 0.15245493)
-
-[node name="sickle1" parent="Floor" unique_id=1819692528 instance=ExtResource("6_f8yge")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.026312262, 0.51135635, 0.15270966)
-
-[node name="sickle2" parent="Floor" unique_id=40419581 instance=ExtResource("7_hl710")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.058140054, 0.5200097, 0.17590961)
-
-[node name="axe4" parent="Floor" unique_id=330098049 instance=ExtResource("3_wglfa")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.042309158, 0.5411745, 0.15478647)
-
-[node name="axe2" parent="Floor" unique_id=1185702145 instance=ExtResource("8_d6pax")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.054766115, 0.52004886, 0.16288978)
-
-[node name="axe5" parent="Floor" unique_id=1057549572 instance=ExtResource("2_xsrgf")]
-transform = Transform3D(0.03329449, 0, 0, 0, 1, 0, 0, 0, 0.039968025, 0.050606497, 0.51759136, 0.15677162)
-
-[node name="kitchen" parent="." unique_id=1458813580 instance=ExtResource("2_bdm02")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.120043, 0.51581514, -8.084045)
-
-[node name="kitchen2" parent="." unique_id=543294048 instance=ExtResource("2_bdm02")]
-transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 5.9055653, 0.51581514, -11.564188)
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1725396900]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1581314, 0.096393704, 3.359326)
-
-[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="." unique_id=168628542]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.382946, 0.096393704, 3.2180986)
-
-[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="." unique_id=1033305874]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.358115, 0.096393704, 7.5975676)
-
-[node name="erba" parent="." unique_id=1183061762 instance=ExtResource("3_igneb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3939624, 0.074207306, -2.5270615)
-visible = false
-
-[node name="Plantable_dirt" parent="." unique_id=780328294 instance=ExtResource("4_a7er8")]
+[node name="Plantable_dirt" parent="." unique_id=1420324434 instance=ExtResource("4_a7er8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1291275, 0.38301468, 3.1911106)
 
 [node name="Plantable_dirt2" parent="." unique_id=1907243758 instance=ExtResource("4_a7er8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1291275, 0.38301468, 7.380192)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Plantable_dirt2" unique_id=8118093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8549452, 0, -31.688282)
+size = Vector3(7.633301, 1, 19.160156)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Plantable_dirt2" unique_id=275101429]
+transform = Transform3D(-0.010698602, 0, 0.9999427, 0, 1, 0, -0.9999427, 0, -0.010698602, 8.696002, 0, -44.411816)
+size = Vector3(7.633301, 1, 19.160156)
 
 [node name="Plantable_dirt3" parent="." unique_id=1219901438 instance=ExtResource("4_a7er8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.393652, 0.38301468, 3.1911106)
@@ -147,22 +102,17 @@ visible = false
 [node name="sell_inteface" parent="CanvasLayer" unique_id=689759960 instance=ExtResource("16_d6pax")]
 visible = false
 
-[node name="Bed" parent="." unique_id=130422262 instance=ExtResource("8_m4ar2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.171244, 1.0000005, -1.7519835)
-
 [node name="CharacterBody3D" parent="." unique_id=168141513 instance=ExtResource("1_pjtql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6249716, 1.5687048, 0.91131043)
 
 [node name="shop" parent="." unique_id=1211752448 instance=ExtResource("19_hl710")]
 transform = Transform3D(7.1209517, 0, 0, 0, 3.6419394, 0, 0, 0, 4.309836, 5.2827797, 2.3046598, -12.520201)
 
-[node name="cabin" parent="." unique_id=1809721730 instance=ExtResource("20_d6pax")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.33024, 0.5, -9.637777)
+[node name="Plantable_dirt_tree" parent="." unique_id=780328294 instance=ExtResource("9_oylvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.345822, 0.4947188, 7.5702896)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="cabin" unique_id=1906949955]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9096828, 0)
-light_color = Color(0.7746089, 0.77438325, 3.85046e-07, 1)
-light_energy = 1.842
+[node name="Plantable_dirt_tree2" parent="." unique_id=958582037 instance=ExtResource("9_oylvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.345822, 0.48705935, 3.174111)
 
-[node name="cabin2" parent="." unique_id=988965784 instance=ExtResource("21_qp13o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.715198, 0.5427028, -1.0276048)
+[node name="Plantable_dirt_tree3" parent="." unique_id=2127982392 instance=ExtResource("9_oylvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9216204, 0.48705935, 3.174111)

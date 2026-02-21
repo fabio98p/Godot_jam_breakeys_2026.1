@@ -12,6 +12,7 @@ func _ready() -> void:
 func run_custom_signal():
 	get_parent().get_parent().get_parent().get_parent().get_parent().plant_selected_seed(item_resource)
 	GS.show_plant_norm_seed_interface.emit(false, "")
+	GS.show_plant_tree_interface.emit(false, "")
 	
 func update_item_box(item: ItemResource, button_are_disabled: bool = true):
 	icon_sprite_2d.texture = item.sprite

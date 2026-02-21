@@ -1,31 +1,32 @@
-[gd_scene format=3 uid="uid://by7rgxiwcxvk2"]
+[gd_scene format=3 uid="uid://llct4joldn85"]
 
-[ext_resource type="Script" uid="uid://dn3dqnyx81g0t" path="res://Interactible/Bed/bed.gd" id="1_hlxns"]
-[ext_resource type="Script" uid="uid://dl481dnfv7mif" path="res://Interactible/Bed/bed_interactible.gd" id="1_q6imb"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_vj0lq"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_q6imb"]
+[ext_resource type="Script" uid="uid://dn3dqnyx81g0t" path="res://Interactible/Bed/bed.gd" id="1_2v0g7"]
+[ext_resource type="PackedScene" uid="uid://c2uhetu0d2u1w" path="res://Assets/models/bed.glb" id="1_btr5k"]
+[ext_resource type="Script" uid="uid://dl481dnfv7mif" path="res://Interactible/Bed/bed_interactible.gd" id="2_2v0g7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hlxns"]
+size = Vector3(3.0915222, 1.3093262, 1.8813171)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_74qy8"]
+size = Vector3(3.0742188, 1.2880859, 1.9320679)
 
 [node name="Bed" type="Node3D" unique_id=130422262]
-script = ExtResource("1_hlxns")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=14434878]
-collision_layer = 8
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="StaticBody3D" unique_id=19203626]
-mesh = SubResource("BoxMesh_vj0lq")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1697422646]
-shape = SubResource("BoxShape3D_q6imb")
+script = ExtResource("1_2v0g7")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=841301574]
 collision_layer = 256
-script = ExtResource("1_q6imb")
+script = ExtResource("2_2v0g7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1092201288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13957214, 0.51257324, 0.027511597)
 shape = SubResource("BoxShape3D_hlxns")
+
+[node name="bed" parent="." unique_id=425108601 instance=ExtResource("1_btr5k")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1921697272]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=766983542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107421875, 0.53564453, 0.013336182)
+shape = SubResource("BoxShape3D_74qy8")
 
 [connection signal="interact" from="Area3D" to="." method="_on_area_3d_interact"]

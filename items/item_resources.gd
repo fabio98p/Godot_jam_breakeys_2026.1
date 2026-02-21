@@ -12,6 +12,7 @@ enum ItemType {
 @export var price: float
 @export var type: ItemType
 @export var model: PackedScene
+@export var model_path: String
 @export var sprite: Texture2D
 @export var takeable_from_dirt: bool = false
 @export var can_grow: bool = false:

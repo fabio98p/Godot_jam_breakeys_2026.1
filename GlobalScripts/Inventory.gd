@@ -3,16 +3,18 @@ const AXE_SEED = preload("uid://c3sxrr8mi2fet")
 const PICKAXE_SEED = preload("uid://cjmng77mi8csb")
 const SICKLE_SEED = preload("uid://d0vu6r8b4pqkx")
 const AXE_3 = preload("uid://djnvd3gf4dh26")
+const TREE_SAW_SEED = preload("uid://c1ll1afhttoq7")
 
 var item_list: Array[ItemResource] = [
 	AXE_SEED,
 	PICKAXE_SEED,
 	SICKLE_SEED,
+	TREE_SAW_SEED,
 	#AXE_3,w
 ]
 func _process(delta: float) -> void:
 	pass
-	#print(item_list.size())
+	print(item_list.size())
 	
 func get_all_items() -> Array[ItemResource]:
 	return item_list

@@ -1,14 +1,34 @@
 extends Control
 const ITEM_BOX = preload("uid://2u3f0lq7s83y")
 @onready var grid_container: GridContainer = %GridContainer
-		
+
+var selected_dirt: Node
+
 func _ready() -> void:
+	GS.show_plant_tree_interface.connect(show_plant_tree_seed_interface)
 	update_item_list()
 	GS.update_all_interface.connect(update_item_list)
 
 func update_item_list():
 	var item_list: Array[ItemResource] = Inventory.get_tree_seed()
+	
+	for item_box in grid_container.get_children():
+		item_box.queue_free()
+		
 	for item in item_list:
 		var item_box = ITEM_BOX.instantiate()
 		grid_container.add_child(item_box)
-		item_box.update_item_box(item.item_name, item.sprite, true)
+		item_box.update_item_box(item, false)
+
+func _on_exit_button_pressed() -> void:
+	GS.show_plant_tree_interface.emit(false, self)
+
+func show_plant_tree_seed_interface(state, dirt):
+	visible = state
+	if dirt:
+		selected_dirt = dirt
+
+func plant_selected_seed(seed: ItemResource):
+	selected_dirt.plant_seed(seed)
+	Inventory.remove_item_from_list(seed)
+	update_item_list()

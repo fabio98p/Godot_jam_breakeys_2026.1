@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dffoa7vwx4dek" path="res://Assets/models/axe3.glb" id="1_phmwx"]
 [ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="2_phmwx"]
-[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="3_nr2lm"]
+[ext_resource type="Texture2D" uid="uid://w08t7joh2p01" path="res://Assets/icons/axe3.png" id="3_phmwx"]
 
 [resource]
 script = ExtResource("2_phmwx")
@@ -10,6 +10,7 @@ item_name = "axe3"
 price = 3.0
 type = 2
 model = ExtResource("1_phmwx")
-sprite = ExtResource("3_nr2lm")
+model_path = null
+sprite = ExtResource("3_phmwx")
 takeable_from_dirt = true
 metadata/_custom_type_script = "uid://ugnopq10x11d"
