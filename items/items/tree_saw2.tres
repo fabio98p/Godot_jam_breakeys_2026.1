@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://cqn8m6exejghh"]
+
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="1_owop8"]
+[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="2_2je0g"]
+
+[resource]
+script = ExtResource("1_owop8")
+item_name = "tree_seed"
+price = 3.0
+type = 1
+model_path = "res://tree/tree_1.tscn"
+sprite = ExtResource("2_2je0g")
+metadata/_custom_type_script = "uid://ugnopq10x11d"
