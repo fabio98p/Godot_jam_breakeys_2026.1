@@ -38,7 +38,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46348837, 0)
 
 [node name="zollabagnata" parent="." unique_id=601839397 instance=ExtResource("3_gsh0p")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.09874594, 0)
-visible = false
 
 [node name="zollasecca" parent="." unique_id=1140806375 instance=ExtResource("4_jehm5")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.09874594, 0)

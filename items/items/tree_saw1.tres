@@ -1,7 +1,5 @@
 [gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://blioiwiwbcnnr"]
 
-[ext_resource type="PackedScene" uid="uid://bftr103e2xnl5" path="res://Assets/models/sickle_seed.glb" id="1_jwrkm"]
-[ext_resource type="Resource" uid="uid://6xi4uygbnsy" path="res://items/items/sickle1.tres" id="2_slqvb"]
 [ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_se24m"]
 [ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="4_b0fjq"]
 
@@ -10,10 +8,6 @@ script = ExtResource("3_se24m")
 item_name = "tree_seed"
 price = 3.0
 type = 1
-model = ExtResource("1_jwrkm")
-model_path = "<nres://tree/tree_1.tscnull>"
+model_path = "res://tree/tree_1.tscn"
 sprite = ExtResource("4_b0fjq")
-can_grow = true
-next_grow_state = ExtResource("2_slqvb")
-day_grow_left = 1
 metadata/_custom_type_script = "uid://ugnopq10x11d"

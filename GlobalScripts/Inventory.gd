@@ -14,7 +14,7 @@ var item_list: Array[ItemResource] = [
 ]
 func _process(delta: float) -> void:
 	pass
-	print(item_list.size())
+	#print(item_list.size())
 	
 func get_all_items() -> Array[ItemResource]:
 	return item_list

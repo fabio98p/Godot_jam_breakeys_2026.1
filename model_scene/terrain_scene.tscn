@@ -28,5 +28,6 @@ shape = SubResource("ConcavePolygonShape3D_stkap")
 [node name="eliminare" type="CollisionShape3D" parent="terrain/StaticBody3D" unique_id=570563689]
 transform = Transform3D(7.5275774, 0, 0, 0, 7.5275774, 0, 0, 0, 7.527578, 0, -3.1782024, 0)
 shape = SubResource("ConcavePolygonShape3D_obgrt")
+disabled = true
 
 [editable path="terrain"]

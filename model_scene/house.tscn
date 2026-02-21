@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://by7pmkofgujqi" path="res://Assets/models/cabinFINE.glb" id="1_d8gq3"]
 [ext_resource type="PackedScene" uid="uid://llct4joldn85" path="res://Interactible/Bed/bed.tscn" id="2_m2j6c"]
+[ext_resource type="PackedScene" uid="uid://mi3a1gqj7b72" path="res://Assets/models/table.glb" id="3_2rr53"]
+[ext_resource type="PackedScene" uid="uid://874d50a141yb" path="res://Assets/models/chair.glb" id="4_hhd57"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d8gq3"]
 size = Vector3(2.085907, 1.8026123, 2.3898315)
@@ -24,10 +26,23 @@ size = Vector3(8.127258, 3.3760986, 0.23327637)
 [sub_resource type="BoxShape3D" id="BoxShape3D_l8f2r"]
 size = Vector3(3.296997, 2.7384033, 0.31829834)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gbtgm"]
+size = Vector3(1.5281982, 1.7060547, 2.361023)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xtjs5"]
+size = Vector3(1.1035156, 2.118164, 1)
+
 [node name="House" type="Node3D" unique_id=1762547151]
 
 [node name="cabinFINE" parent="." unique_id=316311193 instance=ExtResource("1_d8gq3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09299481, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="cabinFINE" unique_id=1355791489]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.609264, 1.0432642, -3.5698962)
+light_color = Color(0.81852263, 0.50713277, 0.25779638, 1)
+light_energy = 5.0
+spot_range = 6.8624024
+spot_angle = 89.99
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2072287410]
 collision_layer = 8
@@ -88,5 +103,26 @@ shape = SubResource("BoxShape3D_l8f2r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2787876, 1.8714495, -0.00650692)
 shape = SubResource("BoxShape3D_l8f2r")
 
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="StaticBody3D" unique_id=358407697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6986074, 0.35302734, -6.1407223)
+shape = SubResource("BoxShape3D_gbtgm")
+
 [node name="Bed" parent="." unique_id=130422262 instance=ExtResource("2_m2j6c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0264456, 0.43881574, -6.3427105)
+
+[node name="table2" parent="." unique_id=121801651 instance=ExtResource("3_2rr53")]
+transform = Transform3D(-0.004590206, 0, -0.9999895, 0, 1, 0, 0.9999895, 0, -0.004590206, 1.7200916, 0.30278146, -6.1554217)
+
+[node name="chair" parent="." unique_id=971208291 instance=ExtResource("4_hhd57")]
+transform = Transform3D(-0.9818397, 0, 0.1897125, 0, 1, 0, -0.1897125, 0, -0.9818397, 2.6229951, 0.29730225, -5.8744535)
+
+[node name="chair2" parent="." unique_id=1225150478 instance=ExtResource("4_hhd57")]
+transform = Transform3D(0.95776224, 0, -0.28756127, 0, 1, 0, 0.28756127, 0, 0.95776224, 0.90943956, 0.29730225, -6.5646234)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1124446]
+transform = Transform3D(0.9416645, 0, -0.33655295, 0, 1, 0, 0.33655295, 0, 0.9416645, 1.0895923, 0.55908203, -6.5363064)
+shape = SubResource("BoxShape3D_xtjs5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=823203506]
+transform = Transform3D(0.9416645, 0, -0.33655295, 0, 1, 0, 0.33655295, 0, 0.9416645, 2.3627415, 0.55908203, -5.9015837)
+shape = SubResource("BoxShape3D_xtjs5")
