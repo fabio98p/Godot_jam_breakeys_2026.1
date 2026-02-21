@@ -41,7 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08436298, 0)
 shape = SubResource("SphereShape3D_c506m")
 
 [node name="plant_space" type="Node3D" parent="." unique_id=1325503360]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22378245, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09158811, 0)
 
 [node name="pick_plant" type="Area3D" parent="." unique_id=2093616774]
 unique_name_in_owner = true
@@ -59,7 +59,6 @@ visible = false
 
 [node name="zollabagnata" parent="." unique_id=601839397 instance=ExtResource("5_qkqj1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0631752, 0)
-visible = false
 
 [node name="put_water" type="Area3D" parent="." unique_id=802974798]
 collision_layer = 256

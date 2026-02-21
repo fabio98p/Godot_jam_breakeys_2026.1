@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://djvr0x2o3b5sm" path="res://Assets/models/axe_seed.glb" id="1_1cm8h"]
 [ext_resource type="Resource" uid="uid://dilgaw6b68pmx" path="res://items/items/axe1.tres" id="1_euue2"]
 [ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="2_4aplm"]
-[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="3_4aplm"]
+[ext_resource type="Texture2D" uid="uid://7jlvbbqvymj" path="res://Assets/icons/seed2.png" id="4_1cm8h"]
 
 [resource]
 script = ExtResource("2_4aplm")
@@ -11,7 +11,7 @@ item_name = "pickaxe_seed"
 price = 3.0
 model = ExtResource("1_1cm8h")
 model_path = null
-sprite = ExtResource("3_4aplm")
+sprite = ExtResource("4_1cm8h")
 takeable_from_dirt = true
 can_grow = true
 next_grow_state = ExtResource("1_euue2")

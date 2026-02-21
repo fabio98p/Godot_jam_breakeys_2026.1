@@ -39,7 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08436298, 0)
 shape = SubResource("SphereShape3D_c506m")
 
 [node name="plant_space" type="Node3D" parent="." unique_id=1325503360]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46348837, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19187275, 0)
 
 [node name="zollabagnata" parent="." unique_id=601839397 instance=ExtResource("3_gsh0p")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.09874594, 0)

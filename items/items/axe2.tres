@@ -3,7 +3,7 @@
 [ext_resource type="Resource" uid="uid://djnvd3gf4dh26" path="res://items/items/axe3.tres" id="1_mmanx"]
 [ext_resource type="PackedScene" uid="uid://bd3c5mfmrmpp4" path="res://Assets/models/axe2.glb" id="1_qi2k7"]
 [ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="2_2ln5q"]
-[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="4_a4k56"]
+[ext_resource type="Texture2D" uid="uid://qnf1x3l45ntr" path="res://Assets/icons/axe2.png" id="4_qi2k7"]
 
 [resource]
 script = ExtResource("2_2ln5q")
@@ -12,7 +12,7 @@ price = 3.0
 type = 2
 model = ExtResource("1_qi2k7")
 model_path = null
-sprite = ExtResource("4_a4k56")
+sprite = ExtResource("4_qi2k7")
 can_grow = true
 next_grow_state = ExtResource("1_mmanx")
 day_grow_left = 1
