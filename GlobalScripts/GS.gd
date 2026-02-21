@@ -31,6 +31,7 @@ func _on_finish_day():
 
 
 func change_mouse_state(state: bool, dirt = ""):
+	print("here")
 	if state:
 		# MODALITÀ MENU
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

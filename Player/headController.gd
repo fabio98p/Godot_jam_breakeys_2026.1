@@ -20,7 +20,7 @@ func _ready() -> void:
 	GS.show_plant_tree_interface.connect(player_stopped)
 	GS.show_sell_inteface.connect(player_stopped)
 
-func player_stopped(stopped, dirt):
+func player_stopped(stopped, dirt = ""):
 	stop_player = stopped
 	
 func _input(event: InputEvent) -> void:

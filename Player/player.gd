@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		annaffiatoio.visible = false
 		annaffiatoio_vuoto.visible = true
 
-func player_stopped(stopped, dirt):
+func player_stopped(stopped, dirt = ""):
 	stop_player = stopped
 
 func _physics_process(delta: float) -> void:
