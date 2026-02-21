@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://du0m6wga1lib5" path="res://model_scene/tree_sfondo/tree_big2.tscn" id="16_fw3l5"]
 [ext_resource type="PackedScene" uid="uid://bgl8i2f758tob" path="res://model_scene/tree_sfondo/tree_mid2.tscn" id="17_wjjle"]
 [ext_resource type="PackedScene" uid="uid://30gnp4y5mg6f" path="res://model_scene/tree_sfondo/tree_small1.tscn" id="18_1sae0"]
+[ext_resource type="PackedScene" uid="uid://b8653cvrn4v6k" path="res://Hud/transition_day/transition_day.tscn" id="19_r2ueb"]
 [ext_resource type="PackedScene" uid="uid://b4pyhtqlhw20" path="res://model_scene/tree_sfondo/tree_small2.tscn" id="19_twn60"]
 [ext_resource type="PackedScene" uid="uid://cbpj570acmkyd" path="res://Interactible/pool/pool.tscn" id="20_fw3l5"]
 [ext_resource type="PackedScene" uid="uid://ceemfaw2k0juf" path="res://model_scene/tree_sfondo/tree_mid1.tscn" id="20_r2ueb"]
@@ -587,6 +588,8 @@ visible = false
 
 [node name="sell_inteface" parent="CanvasLayer" unique_id=1386711944 instance=ExtResource("6_vmy0u")]
 visible = false
+
+[node name="transition_day" parent="CanvasLayer" unique_id=1190442229 instance=ExtResource("19_r2ueb")]
 
 [node name="CharacterBody3D" parent="." unique_id=168141513 instance=ExtResource("8_lybtp")]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -8.658188, 1.530189, -5.93249)

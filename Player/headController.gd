@@ -19,6 +19,7 @@ func _ready() -> void:
 	GS.show_plant_norm_seed_interface.connect(player_stopped)
 	GS.show_plant_tree_interface.connect(player_stopped)
 	GS.show_sell_inteface.connect(player_stopped)
+	GS.sleeping.connect(player_stopped)
 
 func player_stopped(stopped, dirt = ""):
 	stop_player = stopped

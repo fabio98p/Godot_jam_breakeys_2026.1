@@ -16,6 +16,8 @@ signal show_sell_inteface(visibility: bool)
 signal update_all_interface
 signal finish_day
 
+signal sleeping(state:bool)
+
 func _ready():
 	finish_day.connect(_on_finish_day)
 	show_inventory.connect(change_mouse_state)
@@ -27,8 +29,7 @@ func _on_finish_day():
 	current_day += 1
 	Market.refresh_market()
 	print("Nuovo giorno:", current_day)
-
-
+	init_sleeping()
 
 func change_mouse_state(state: bool, dirt = ""):
 	print("here")
@@ -40,3 +41,8 @@ func change_mouse_state(state: bool, dirt = ""):
 		# MODALITÀ GIOCO
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		inventory_is_open = false
+
+func init_sleeping():
+	sleeping.emit(true)
+	await get_tree().create_timer(5).timeout
+	sleeping.emit(false)
