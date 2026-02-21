@@ -8,6 +8,9 @@ extends CharacterBody3D
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
 
+@onready var annaffiatoio: Node3D = $Head/Camera3D/annaffiatoio
+@onready var annaffiatoio_vuoto: Node3D = $Head/Camera3D/annaffiatoioVUOTO
+
 var mouse_input: Vector2 = Vector2.ZERO
 
 const SPEED = 5.0
@@ -27,20 +30,26 @@ func _ready() -> void:
 	GS.show_plant_tree_interface.connect(player_stopped)
 	GS.show_sell_inteface.connect(player_stopped)
 
+func _process(delta: float) -> void:
+	if GS.bucket_full:
+		annaffiatoio.visible = true
+		annaffiatoio_vuoto.visible = false
+	else: 
+		annaffiatoio.visible = false
+		annaffiatoio_vuoto.visible = true
+
 func player_stopped(stopped, dirt):
 	stop_player = stopped
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
-		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		#GS.show_inventory.emit(false)
-		#GS.show_plant_norm_seed_interface.emit(false)
-		#GS.show_plant_tree_interface.emit(false)
-		#GS.show_sell_inteface.emit(false)
+	if Input.is_action_just_pressed("interaction2"):
+		if !GS.inventory_is_open:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	if !stop_player:
 		# Add the gravity.

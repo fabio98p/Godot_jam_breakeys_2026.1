@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dyl2b2hc1lqo3" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://b2uuj2eo0kckr" path="res://Player/headController.gd" id="2_0lybq"]
 [ext_resource type="Script" uid="uid://bd8y4to1djgv5" path="res://Player/ray_cast_3d.gd" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://cg131fc8aaj4t" path="res://Assets/models/annaffiatoio.glb" id="4_k53q1"]
+[ext_resource type="PackedScene" uid="uid://djvr1xc5tteuf" path="res://Assets/models/annaffiatoioVUOTO.glb" id="5_fhl08"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
 
@@ -48,6 +50,12 @@ grow_vertical = 2
 text = "PROMPT
 [KEY]"
 horizontal_alignment = 1
+
+[node name="annaffiatoio" parent="Head/Camera3D" unique_id=1257725115 instance=ExtResource("4_k53q1")]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.29807037, -0.03397137, 0, 0.03397137, 0.29807037, 0.2590307, -0.20620647, -0.42125183)
+
+[node name="annaffiatoioVUOTO" parent="Head/Camera3D" unique_id=269206467 instance=ExtResource("5_fhl08")]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.29807037, -0.03397137, 0, 0.03397137, 0.29807037, 0.25867248, -0.20625958, -0.42133647)
 
 [node name="HeadCameraAnchor" type="Marker3D" parent="." unique_id=331907274]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.581, 0)

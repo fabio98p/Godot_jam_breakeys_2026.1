@@ -4,6 +4,10 @@ var current_coin: int = 500
 
 var current_day: int = 1
 
+var bucket_full = false
+
+var inventory_is_open = false
+
 signal show_inventory(visibility: bool)
 signal show_plant_norm_seed_interface(visibility: bool, dirt: Node)
 signal show_plant_tree_interface(visibility: bool, dirt: Node,ciao:Node)
@@ -30,6 +34,8 @@ func change_mouse_state(state: bool, dirt = ""):
 	if state:
 		# MODALITÀ MENU
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		inventory_is_open = true
 	else:
 		# MODALITÀ GIOCO
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		inventory_is_open = false

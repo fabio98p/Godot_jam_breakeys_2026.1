@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bgl8i2f758tob" path="res://model_scene/tree_sfondo/tree_mid2.tscn" id="17_wjjle"]
 [ext_resource type="PackedScene" uid="uid://30gnp4y5mg6f" path="res://model_scene/tree_sfondo/tree_small1.tscn" id="18_1sae0"]
 [ext_resource type="PackedScene" uid="uid://b4pyhtqlhw20" path="res://model_scene/tree_sfondo/tree_small2.tscn" id="19_twn60"]
+[ext_resource type="PackedScene" uid="uid://cbpj570acmkyd" path="res://Interactible/pool/pool.tscn" id="20_fw3l5"]
 [ext_resource type="PackedScene" uid="uid://ceemfaw2k0juf" path="res://model_scene/tree_sfondo/tree_mid1.tscn" id="20_r2ueb"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xsqsu"]
@@ -557,6 +558,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.345822, 0.23296475, 3.17411
 
 [node name="Plantable_dirt_tree3" parent="tree_seed_dirt" unique_id=465444136 instance=ExtResource("10_jmcc3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9216204, 0.17422783, 3.174111)
+
+[node name="Pool" parent="tree_seed_dirt" unique_id=281867830 instance=ExtResource("20_fw3l5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2908354, 0.9533775, 7.800715)
 
 [node name="Bed" parent="." unique_id=1566716998 instance=ExtResource("7_jjxhf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0372396, 0.29050604, -1.7793194)
