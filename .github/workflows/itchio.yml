@@ -25,6 +25,6 @@ jobs:
         with:
           butler_key: ${{secrets.ITCHIO_TOKEN}}
           itch_user: fabio98p
-          itch_game: breakeys-20261
+          itch_game: strange-plants
           version: ${{ github.ref_name }}
           files: "${{ steps.export.outputs.archive_directory }}/test-web.zip"

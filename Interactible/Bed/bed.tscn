@@ -24,6 +24,7 @@ shape = SubResource("BoxShape3D_hlxns")
 [node name="bed" parent="." unique_id=425108601 instance=ExtResource("1_btr5k")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1921697272]
+collision_layer = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=766983542]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107421875, 0.53564453, 0.013336182)

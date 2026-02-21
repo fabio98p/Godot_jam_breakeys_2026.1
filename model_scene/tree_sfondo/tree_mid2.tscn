@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bgl8i2f758tob"]
+
+[ext_resource type="PackedScene" uid="uid://3nmey1efyo5d" path="res://Assets/models/albero_sfondo2.glb" id="1_3v8i0"]
+
+[node name="TreeSmall1" type="Node3D" unique_id=1592218194]
+
+[node name="albero_sfondo2" parent="." unique_id=14648027 instance=ExtResource("1_3v8i0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
