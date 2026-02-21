@@ -6,34 +6,33 @@
 [ext_resource type="PackedScene" uid="uid://b8r1o28uyyjvh" path="res://Interactible/dirt/plantable_dirt.tscn" id="4_a7er8"]
 [ext_resource type="PackedScene" uid="uid://ds4mdksnyneiy" path="res://Hud/Inventory/inventory.tscn" id="6_82mpy"]
 [ext_resource type="PackedScene" uid="uid://bu143vv81fge1" path="res://Interactible/dirt_tree/plantable_dirt_tree.tscn" id="9_oylvt"]
+[ext_resource type="Texture2D" uid="uid://dhfu8q3abpluo" path="res://Assets/autumn_field_puresky_2k.hdr" id="12_75t1q"]
 [ext_resource type="PackedScene" uid="uid://br1gwjdp68rt" path="res://Hud/hud.tscn" id="13_wglfa"]
 [ext_resource type="PackedScene" uid="uid://cxxbtw6kle4f6" path="res://Hud/Plant_norm_seed_interface/plant_norm_seed_inteface.tscn" id="14_f8yge"]
 [ext_resource type="PackedScene" uid="uid://c4qhtb3w4o8nb" path="res://Hud/Plant_tree_interface/plant_tree_inteface.tscn" id="15_hl710"]
 [ext_resource type="PackedScene" uid="uid://ctki7we0o8i8v" path="res://Hud/Sell_interface/sell_inteface.tscn" id="16_d6pax"]
 [ext_resource type="PackedScene" uid="uid://cwujqf46mulrg" path="res://Interactible/Shop/shop.tscn" id="19_hl710"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pjtql"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_bdm02"]
-sky_material = SubResource("ProceduralSkyMaterial_pjtql")
-
-[sub_resource type="Environment" id="Environment_igneb"]
-background_mode = 2
-sky = SubResource("Sky_bdm02")
-tonemap_mode = 2
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_bir38"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igneb"]
 albedo_color = Color(0, 0.36913243, 3.85046e-07, 1)
 
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_75t1q"]
+panorama = ExtResource("12_75t1q")
+energy_multiplier = 0.7
+
+[sub_resource type="Sky" id="Sky_3hgmi"]
+sky_material = SubResource("PanoramaSkyMaterial_75t1q")
+
+[sub_resource type="Environment" id="Environment_l2yno"]
+background_mode = 2
+sky = SubResource("Sky_3hgmi")
+reflected_light_source = 2
+tonemap_mode = 2
+
 [node name="MainLevel" type="Node3D" unique_id=726108182]
 script = ExtResource("1_82mpy")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1888993597]
-environment = SubResource("Environment_igneb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=866992791]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -116,3 +115,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.345822, 0.48705935, 3.17411
 
 [node name="Plantable_dirt_tree3" parent="." unique_id=2127982392 instance=ExtResource("9_oylvt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9216204, 0.48705935, 3.174111)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1276136646]
+environment = SubResource("Environment_l2yno")

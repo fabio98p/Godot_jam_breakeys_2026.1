@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dt6fndt54rp7b"]
 
+[ext_resource type="Texture2D" uid="uid://dhfu8q3abpluo" path="res://Assets/autumn_field_puresky_2k.hdr" id="1_3hgmi"]
 [ext_resource type="PackedScene" uid="uid://b8r1o28uyyjvh" path="res://Interactible/dirt/plantable_dirt.tscn" id="1_ugh17"]
 [ext_resource type="PackedScene" uid="uid://cahwui32p3i0a" path="res://model_scene/fence_scene.tscn" id="2_3hgmi"]
 [ext_resource type="PackedScene" uid="uid://n1mn4nt88hg5" path="res://model_scene/house.tscn" id="2_dvejp"]
@@ -14,16 +15,18 @@
 [ext_resource type="PackedScene" uid="uid://bu143vv81fge1" path="res://Interactible/dirt_tree/plantable_dirt_tree.tscn" id="10_jmcc3"]
 [ext_resource type="PackedScene" uid="uid://c5krr4cihfpxp" path="res://model_scene/terrain_scene.tscn" id="11_fw3l5"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eabcg"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xsqsu"]
+panorama = ExtResource("1_3hgmi")
+energy_multiplier = 0.7
 
-[sub_resource type="Sky" id="Sky_dvejp"]
-sky_material = SubResource("ProceduralSkyMaterial_eabcg")
+[sub_resource type="Sky" id="Sky_3hgmi"]
+sky_material = SubResource("PanoramaSkyMaterial_xsqsu")
 
 [sub_resource type="Environment" id="Environment_3hgmi"]
 background_mode = 2
-sky = SubResource("Sky_dvejp")
+sky = SubResource("Sky_3hgmi")
+ambient_light_energy = 0.0
+reflected_light_source = 2
 tonemap_mode = 2
 
 [node name="Level" type="Node3D" unique_id=703068469]
@@ -32,9 +35,9 @@ tonemap_mode = 2
 environment = SubResource("Environment_3hgmi")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=389329961]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.88396657, 0.17005508, -0.43552774, -0.38563326, -0.7918866, 0.47350037, -0.26436746, 0.58651245, 0.76558024, 0, 3.1478596, 0)
+light_color = Color(0.9287778, 0.8467543, 0.69177806, 1)
 shadow_enabled = true
-directional_shadow_max_distance = 1.0
 
 [node name="Environment" type="Node3D" parent="." unique_id=478129498]
 

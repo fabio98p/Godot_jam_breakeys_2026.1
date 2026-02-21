@@ -18,7 +18,8 @@ collision_layer = 8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_stkap")
 
-[node name="Plane_001" parent="terrain" index="2" unique_id=67407024]
-visible = false
+[node name="Plane" parent="terrain" index="1" unique_id=1894528712]
+visibility_range_end = 4096.0
+visibility_range_end_margin = 22.35
 
 [editable path="terrain"]
