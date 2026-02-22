@@ -26,7 +26,7 @@ func _on_pressed() -> void:
 	buy_current_item()
 
 func buy_current_item():
-	if GS.current_coin - item_resource.price > 0:
+	if GS.current_coin - item_resource.price >= 0:
 		var price = item_resource.price
 		GS.current_coin -= price
 		Inventory.add_item_to_list(item_resource)
