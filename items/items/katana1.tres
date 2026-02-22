@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://btvd0h0fnrjls"]
+
+[ext_resource type="PackedScene" uid="uid://xqu6gulkjap1" path="res://Assets/models/katana1.glb" id="1_3mieu"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_vo35i"]
+[ext_resource type="Texture2D" uid="uid://dn7q7vpbrs5vv" path="res://Assets/icons/KATANASPRITE.png" id="4_ivlgv"]
+
+[resource]
+script = ExtResource("3_vo35i")
+item_name = "Katnana"
+price = 80.0
+type = 2
+model = ExtResource("1_3mieu")
+sprite = ExtResource("4_ivlgv")
+takeable_from_dirt = true
+metadata/_custom_type_script = "uid://ugnopq10x11d"

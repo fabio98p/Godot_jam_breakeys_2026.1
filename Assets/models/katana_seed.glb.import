@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://xqu6gulkjap1"
-path="res://.godot/imported/katana1.glb-cfcc6c38c50d0639de9992dd6d024919.scn"
+uid="uid://ba2qi5rd0qnkv"
+path="res://.godot/imported/katana_seed.glb-03acc698f6cff446f15e8a1c71c53b67.scn"
 
 [deps]
 
-source_file="res://Assets/models/katana1.glb"
-dest_files=["res://.godot/imported/katana1.glb-cfcc6c38c50d0639de9992dd6d024919.scn"]
+source_file="res://Assets/models/katana_seed.glb"
+dest_files=["res://.godot/imported/katana_seed.glb-03acc698f6cff446f15e8a1c71c53b67.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=0.5
+nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true

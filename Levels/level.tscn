@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cwujqf46mulrg" path="res://Interactible/Shop/shop.tscn" id="9_8hqpc"]
 [ext_resource type="PackedScene" uid="uid://bu143vv81fge1" path="res://Interactible/dirt_tree/plantable_dirt_tree.tscn" id="10_jmcc3"]
 [ext_resource type="PackedScene" uid="uid://c5krr4cihfpxp" path="res://model_scene/terrain_scene.tscn" id="11_fw3l5"]
+[ext_resource type="PackedScene" uid="uid://dqny7arjautgx" path="res://tree/tree_2.tscn" id="14_3fdi5"]
 [ext_resource type="PackedScene" uid="uid://1ldu3lh5hqp6" path="res://model_scene/tree_sfondo/tree_big1.tscn" id="15_jmcc3"]
 [ext_resource type="PackedScene" uid="uid://bdy7at2m1gy2i" path="res://Assets/models/tutorial2.glb" id="15_nflnv"]
 [ext_resource type="PackedScene" uid="uid://du0m6wga1lib5" path="res://model_scene/tree_sfondo/tree_big2.tscn" id="16_fw3l5"]
@@ -564,6 +565,9 @@ transform = Transform3D(0.99995154, 0.009843498, 0, -0.009843498, 0.99995154, 0,
 
 [node name="Tutorial" parent="Environment" unique_id=1062022075 instance=ExtResource("27_nflnv")]
 transform = Transform3D(0.033294678, 0, -0.99944556, 0, 1, 0, 0.99944556, 0, 0.033294678, 1.229722, -1.9199013, -11.603332)
+
+[node name="tree2" parent="Environment" unique_id=431042039 instance=ExtResource("14_3fdi5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.123964876, 0.1603743, 7.236854)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1536560400]
 

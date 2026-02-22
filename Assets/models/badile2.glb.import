@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://6oby7q4waux"
-path="res://.godot/imported/granata2glb.glb-cbe001194c6ef061bb3fb7e205faf1f2.scn"
+uid="uid://uiomnr0ta0ul"
+path="res://.godot/imported/badile2.glb-bdd6ee1cea55a071a547759af93a8c08.scn"
 
 [deps]
 
-source_file="res://Assets/models/granata2glb.glb"
-dest_files=["res://.godot/imported/granata2glb.glb-cbe001194c6ef061bb3fb7e205faf1f2.scn"]
+source_file="res://Assets/models/badile2.glb"
+dest_files=["res://.godot/imported/badile2.glb-bdd6ee1cea55a071a547759af93a8c08.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.1
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true

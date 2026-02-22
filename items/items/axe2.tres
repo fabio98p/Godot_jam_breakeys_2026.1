@@ -7,13 +7,12 @@
 
 [resource]
 script = ExtResource("2_2ln5q")
-item_name = "axe2"
-price = 3.0
+item_name = "Axe"
+price = 28.0
 type = 2
 model = ExtResource("1_qi2k7")
-model_path = null
 sprite = ExtResource("4_qi2k7")
 can_grow = true
 next_grow_state = ExtResource("1_mmanx")
-day_grow_left = 1
+day_grow_left = 2
 metadata/_custom_type_script = "uid://ugnopq10x11d"

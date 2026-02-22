@@ -7,10 +7,9 @@
 
 [resource]
 script = ExtResource("2_fwsr7")
-item_name = "sickle_seed"
-price = 3.0
+item_name = "Sickle seed"
+price = 7.0
 model = ExtResource("1_fwsr7")
-model_path = null
 sprite = ExtResource("4_fwsr7")
 can_grow = true
 next_grow_state = ExtResource("1_st0op")

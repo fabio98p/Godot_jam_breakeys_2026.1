@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://cvjagbtpolvr4"]
+
+[ext_resource type="PackedScene" uid="uid://i6fbeyntapwa" path="res://Assets/models/granata_seed.glb" id="1_y86nb"]
+[ext_resource type="Resource" uid="uid://co0xkib62jcq7" path="res://items/items/tree_tnt1.tres" id="2_y86nb"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_rmv3w"]
+[ext_resource type="Texture2D" uid="uid://dsp8duvply0xi" path="res://Assets/icons/SEMETNTSPRITE.png" id="4_y86nb"]
+
+[resource]
+script = ExtResource("3_rmv3w")
+item_name = "TNT seed"
+price = 35.0
+type = 1
+model = ExtResource("1_y86nb")
+sprite = ExtResource("4_y86nb")
+can_grow = true
+next_grow_state = ExtResource("2_y86nb")
+day_grow_left = 1
+metadata/_custom_type_script = "uid://ugnopq10x11d"

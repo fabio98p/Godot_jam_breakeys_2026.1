@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://jo1407bjm53n"]
+
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_ciwi1"]
+[ext_resource type="Texture2D" uid="uid://oenni4euulbi" path="res://Assets/icons/TNTSPRITE.png" id="4_rytpy"]
+
+[resource]
+script = ExtResource("3_ciwi1")
+item_name = "TNT"
+price = 3.0
+type = 1
+model_path = "res://tree/tree_2.tscn"
+sprite = ExtResource("4_rytpy")
+metadata/_custom_type_script = "uid://ugnopq10x11d"

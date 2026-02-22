@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_owop8")
-item_name = "tree_seed"
+item_name = "Chainsaw"
 price = 3.0
 type = 1
 model_path = "res://tree/tree_1.tscn"

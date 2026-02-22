@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://b0hn3prx26r47" path="res://tree/tree_1.gd" id="1_io5l1"]
 [ext_resource type="PackedScene" uid="uid://cjhmtw0w058e8" path="res://Assets/models/albero1.glb" id="1_nrenb"]
 [ext_resource type="PackedScene" uid="uid://boqady5oaxrox" path="res://tree/spown_point.tscn" id="3_8l5ak"]
-[ext_resource type="Resource" uid="uid://c3sxrr8mi2fet" path="res://items/items/axe_seed.tres" id="4_14ekb"]
-[ext_resource type="Resource" uid="uid://cjmng77mi8csb" path="res://items/items/pickaxe_seed.tres" id="5_sgrp3"]
-[ext_resource type="Resource" uid="uid://d0vu6r8b4pqkx" path="res://items/items/sickle_seed.tres" id="6_hb03o"]
+[ext_resource type="Resource" uid="uid://dnk77jgb5chle" path="res://items/items/saw1.tres" id="4_q1p6q"]
 
 [node name="tree1" type="Node3D" unique_id=431042039]
 script = ExtResource("1_io5l1")
@@ -15,13 +13,13 @@ script = ExtResource("1_io5l1")
 [node name="SpownsPoint" type="Node3D" parent="." unique_id=1568205741]
 
 [node name="SpownPoint" parent="SpownsPoint" unique_id=2134861173 instance=ExtResource("3_8l5ak")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1900007, 1.5813864)
-seed_to_spawn = ExtResource("4_14ekb")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.181705, 2.841566, 0.12460971)
+seed_to_spawn = ExtResource("4_q1p6q")
 
 [node name="SpownPoint2" parent="SpownsPoint" unique_id=806320927 instance=ExtResource("3_8l5ak")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1329584, 0.9134058, 0)
-seed_to_spawn = ExtResource("5_sgrp3")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5369725, 3.4867716, -0.903692)
+seed_to_spawn = ExtResource("4_q1p6q")
 
 [node name="SpownPoint3" parent="SpownsPoint" unique_id=287908469 instance=ExtResource("3_8l5ak")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8128779, 1.7935334, 0)
-seed_to_spawn = ExtResource("6_hb03o")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7004979, 2.8291974, 0.73831)
+seed_to_spawn = ExtResource("4_q1p6q")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://dltp627yf1gg3"]
+
+[ext_resource type="PackedScene" uid="uid://6oby7q4waux" path="res://Assets/models/granata2.glb" id="1_stf7i"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_ex4wv"]
+[ext_resource type="Texture2D" uid="uid://oenni4euulbi" path="res://Assets/icons/TNTSPRITE.png" id="3_stf7i"]
+
+[resource]
+script = ExtResource("3_ex4wv")
+item_name = "TNT"
+price = 100.0
+type = 2
+model = ExtResource("1_stf7i")
+sprite = ExtResource("3_stf7i")
+takeable_from_dirt = true
+metadata/_custom_type_script = "uid://ugnopq10x11d"

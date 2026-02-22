@@ -5,13 +5,21 @@ const ITEM_BOX_BUY = preload("uid://diyu4ckw7jjns")
 @onready var buy_container: GridContainer = %BuyContainer
 
 const AXE_SEED = preload("uid://c3sxrr8mi2fet")
+const KATANA_SEED = preload("uid://cpmi81apb3yss")
 const PICKAXE_SEED = preload("uid://cjmng77mi8csb")
+const SHOVEL_SEED = preload("uid://ilibyovo7k4g")
 const SICKLE_SEED = preload("uid://d0vu6r8b4pqkx")
+const TREE_SAW_SEED = preload("uid://c1ll1afhttoq7")
+const TREE_TNT_SEED = preload("uid://cvjagbtpolvr4")
 
 var buy_list: Array[ItemResource] = [
-	AXE_SEED,
-	PICKAXE_SEED,
-	SICKLE_SEED
+AXE_SEED,
+KATANA_SEED,
+PICKAXE_SEED,
+SHOVEL_SEED,
+SICKLE_SEED,
+TREE_SAW_SEED,
+TREE_TNT_SEED
 ]
 
 func _ready() -> void:

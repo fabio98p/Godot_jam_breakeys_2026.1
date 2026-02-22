@@ -7,11 +7,10 @@
 
 [resource]
 script = ExtResource("2_p0ysu")
-item_name = "axe1"
-price = 3.0
+item_name = "Axe small"
+price = 12.0
 type = 2
 model = ExtResource("1_2l3f5")
-model_path = null
 sprite = ExtResource("4_2l3f5")
 can_grow = true
 next_grow_state = ExtResource("1_me3gk")

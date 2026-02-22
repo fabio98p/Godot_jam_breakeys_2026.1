@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dqny7arjautgx"]
+
+[ext_resource type="Script" uid="uid://dfq3522edy7xe" path="res://tree/tree_2.gd" id="1_y3o5l"]
+[ext_resource type="PackedScene" uid="uid://cjhmtw0w058e8" path="res://Assets/models/albero1.glb" id="2_be7j2"]
+[ext_resource type="PackedScene" uid="uid://boqady5oaxrox" path="res://tree/spown_point.tscn" id="3_47jxf"]
+[ext_resource type="Resource" uid="uid://bop6bw3qmsocr" path="res://items/items/tnt1.tres" id="4_bmlw5"]
+
+[node name="tree2" type="Node3D" unique_id=431042039]
+script = ExtResource("1_y3o5l")
+
+[node name="albero1" parent="." unique_id=651734824 instance=ExtResource("2_be7j2")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="SpownsPoint" type="Node3D" parent="." unique_id=1568205741]
+
+[node name="SpownPoint" parent="SpownsPoint" unique_id=2134861173 instance=ExtResource("3_47jxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5848019, 1.6246057, 0.08269894)
+seed_to_spawn = ExtResource("4_bmlw5")
+
+[node name="SpownPoint2" parent="SpownsPoint" unique_id=806320927 instance=ExtResource("3_47jxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0803273, 1.729373, 0.45986962)
+seed_to_spawn = ExtResource("4_bmlw5")
+
+[node name="SpownPoint3" parent="SpownsPoint" unique_id=287908469 instance=ExtResource("3_47jxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3577586, 2.041861, -0.5213842)
+seed_to_spawn = ExtResource("4_bmlw5")

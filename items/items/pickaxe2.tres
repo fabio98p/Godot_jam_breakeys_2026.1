@@ -6,11 +6,10 @@
 
 [resource]
 script = ExtResource("2_e057v")
-item_name = "pickaxe"
-price = 5.0
+item_name = "Pickaxe"
+price = 25.0
 type = 2
 model = ExtResource("1_0tmcp")
-model_path = null
 sprite = ExtResource("3_0tmcp")
 takeable_from_dirt = true
 metadata/_custom_type_script = "uid://ugnopq10x11d"

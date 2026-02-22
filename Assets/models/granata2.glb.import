@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://uiomnr0ta0ul"
-path="res://.godot/imported/badile3.glb-b26b4eef9b66d65a21aff9ff6dc9dc0c.scn"
+uid="uid://6oby7q4waux"
+path="res://.godot/imported/granata2.glb-7e6b05b2c90982417ce94bacec0e46ae.scn"
 
 [deps]
 
-source_file="res://Assets/models/badile3.glb"
-dest_files=["res://.godot/imported/badile3.glb-b26b4eef9b66d65a21aff9ff6dc9dc0c.scn"]
+source_file="res://Assets/models/granata2.glb"
+dest_files=["res://.godot/imported/granata2.glb-7e6b05b2c90982417ce94bacec0e46ae.scn"]
 
 [params]
 

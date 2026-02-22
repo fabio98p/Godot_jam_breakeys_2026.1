@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dd87kgsewowlc"
-path="res://.godot/imported/katana2.glb-e3a3caf8faea6faa36effc9ebcb80072.scn"
+uid="uid://brgy6fx1vqvpa"
+path="res://.godot/imported/prealbero.glb-c3f5ac9fe38214dc88f1f5a4541cc1a4.scn"
 
 [deps]
 
-source_file="res://Assets/models/katana2.glb"
-dest_files=["res://.godot/imported/katana2.glb-e3a3caf8faea6faa36effc9ebcb80072.scn"]
+source_file="res://Assets/models/prealbero.glb"
+dest_files=["res://.godot/imported/prealbero.glb-c3f5ac9fe38214dc88f1f5a4541cc1a4.scn"]
 
 [params]
 

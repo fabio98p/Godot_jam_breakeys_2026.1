@@ -7,12 +7,10 @@
 
 [resource]
 script = ExtResource("2_4aplm")
-item_name = "pickaxe_seed"
-price = 3.0
+item_name = "Axe seed"
+price = 6.0
 model = ExtResource("1_1cm8h")
-model_path = null
 sprite = ExtResource("4_1cm8h")
-takeable_from_dirt = true
 can_grow = true
 next_grow_state = ExtResource("1_euue2")
 day_grow_left = 1

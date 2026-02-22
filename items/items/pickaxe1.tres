@@ -7,11 +7,10 @@
 
 [resource]
 script = ExtResource("3_irdr0")
-item_name = "pickaxe"
-price = 5.0
+item_name = "pickaxe small"
+price = 10.0
 type = 2
 model = ExtResource("1_omd83")
-model_path = null
 sprite = ExtResource("4_omd83")
 takeable_from_dirt = true
 can_grow = true

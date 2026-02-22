@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://dnk77jgb5chle"]
+
+[ext_resource type="PackedScene" uid="uid://rd17xgh7ufxe" path="res://Assets/models/saw1.glb" id="1_8btlo"]
+[ext_resource type="Resource" uid="uid://culs3mj82wwo3" path="res://items/items/saw2.tres" id="2_rownh"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_idgqk"]
+[ext_resource type="Texture2D" uid="uid://b1ubeoat46efa" path="res://Assets/icons/SEGASPRITE.png" id="4_kecsh"]
+
+[resource]
+script = ExtResource("3_idgqk")
+item_name = "Saw"
+price = 35.0
+type = 2
+model = ExtResource("1_8btlo")
+sprite = ExtResource("4_kecsh")
+takeable_from_dirt = true
+can_grow = true
+next_grow_state = ExtResource("2_rownh")
+day_grow_left = 3
+metadata/_custom_type_script = "uid://ugnopq10x11d"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://xr7inydbne4f"]
+
+[ext_resource type="PackedScene" uid="uid://uiomnr0ta0ul" path="res://Assets/models/badile2.glb" id="1_cvla8"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_te1l1"]
+[ext_resource type="Texture2D" uid="uid://dkp4eg32b5qno" path="res://Assets/icons/BADILESPRITE.png" id="4_fyisw"]
+
+[resource]
+script = ExtResource("3_te1l1")
+item_name = "Shovel"
+price = 30.0
+model = ExtResource("1_cvla8")
+sprite = ExtResource("4_fyisw")
+takeable_from_dirt = true
+metadata/_custom_type_script = "uid://ugnopq10x11d"

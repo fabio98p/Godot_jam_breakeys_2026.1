@@ -1,17 +1,17 @@
 [gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://c1ll1afhttoq7"]
 
-[ext_resource type="PackedScene" uid="uid://bftr103e2xnl5" path="res://Assets/models/sickle_seed.glb" id="1_8l56h"]
+[ext_resource type="PackedScene" uid="uid://bpihtn71esrox" path="res://Assets/models/saw_seed.glb" id="1_8l56h"]
 [ext_resource type="Resource" uid="uid://blioiwiwbcnnr" path="res://items/items/tree_saw1.tres" id="2_8l56h"]
 [ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_gqmpn"]
-[ext_resource type="Texture2D" uid="uid://b4e840s5hda1u" path="res://Assets/upgrade_sword.png" id="4_8xxqg"]
+[ext_resource type="Texture2D" uid="uid://tiuoqbpom3j8" path="res://Assets/icons/SEMESEGA.png" id="4_8l56h"]
 
 [resource]
 script = ExtResource("3_gqmpn")
-item_name = "tree_seed"
-price = 3.0
+item_name = "Seed Tree Saw"
+price = 30.0
 type = 1
 model = ExtResource("1_8l56h")
-sprite = ExtResource("4_8xxqg")
+sprite = ExtResource("4_8l56h")
 can_grow = true
 next_grow_state = ExtResource("2_8l56h")
 day_grow_left = 1

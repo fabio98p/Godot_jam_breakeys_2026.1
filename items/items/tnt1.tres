@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://bop6bw3qmsocr"]
+
+[ext_resource type="PackedScene" uid="uid://c1bhxpw8f1yiv" path="res://Assets/models/granata1.glb" id="1_4d6vg"]
+[ext_resource type="Resource" uid="uid://dltp627yf1gg3" path="res://items/items/tnt2.tres" id="2_4d6vg"]
+[ext_resource type="Script" uid="uid://ugnopq10x11d" path="res://items/item_resources.gd" id="3_qvuha"]
+[ext_resource type="Texture2D" uid="uid://craeb1ykwccjy" path="res://Assets/icons/GRANATASPRITE.png" id="4_4d6vg"]
+
+[resource]
+script = ExtResource("3_qvuha")
+item_name = "Granade"
+price = 40.0
+type = 2
+model = ExtResource("1_4d6vg")
+sprite = ExtResource("4_4d6vg")
+takeable_from_dirt = true
+can_grow = true
+next_grow_state = ExtResource("2_4d6vg")
+day_grow_left = 1
+metadata/_custom_type_script = "uid://ugnopq10x11d"

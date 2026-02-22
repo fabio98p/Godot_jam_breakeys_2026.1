@@ -1,6 +1,6 @@
 extends Node
 
-var current_coin: int = 500
+var current_coin: int = 15
 
 var current_day: int = 1
 
