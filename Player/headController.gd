@@ -27,9 +27,15 @@ func player_stopped(stopped, dirt = ""):
 func _input(event: InputEvent) -> void:
 	if !stop_player:
 		if event is InputEventMouseMotion:
-			mouse_input.x += -event.screen_relative.x * mouse_sensitivity
-			mouse_input.y += -event.screen_relative.y * mouse_sensitivity
+			var relative_movement = event.screen_relative
+			
+			if OS.has_feature("web"):
+				relative_movement.x = clamp(relative_movement.x, -50, 50)
+				relative_movement.y = clamp(relative_movement.y, -50, 50)
 
+			mouse_input.x += -relative_movement.x * mouse_sensitivity
+			mouse_input.y += -relative_movement.y * mouse_sensitivity
+			
 func _process(_delta: float) -> void:
 	if !stop_player:
 		input_rotation.x = clampf(input_rotation.x + mouse_input.y, deg_to_rad(-90), deg_to_rad(85))
