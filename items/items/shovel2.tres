@@ -8,6 +8,7 @@
 script = ExtResource("3_te1l1")
 item_name = "Shovel"
 price = 30.0
+type = 2
 model = ExtResource("1_cvla8")
 sprite = ExtResource("4_fyisw")
 takeable_from_dirt = true

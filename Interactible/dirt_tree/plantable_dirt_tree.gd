@@ -13,7 +13,7 @@ var dirt_wet: bool = false
 var models
 
 func plant_seed(seed: ItemResource):
-	item_planted = seed
+	item_planted = seed.duplicate(true)
 	update_plant()
 
 func _ready():
@@ -31,7 +31,7 @@ func _on_finish_day():
 			print("cresci bastatdo")
 			var has_to_grow = item_planted.has_to_grow()
 			if has_to_grow:
-				item_planted = item_planted.next_grow_state
+				item_planted = item_planted.next_grow_state.duplicate(true)
 				update_plant()
 	dirt_wet = false
 	

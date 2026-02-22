@@ -17,11 +17,11 @@ func _on_finish_day():
 	else:
 		var has_to_grow = current_seed.has_to_grow()
 		if has_to_grow:
-			current_seed = current_seed.next_grow_state
+			current_seed = current_seed.next_grow_state.duplicate(true)
 			update_plant()
 				
 func spawn_seed():
-	current_seed = seed_to_spawn
+	current_seed = seed_to_spawn.duplicate(true)
 	update_plant()
 	
 func _on_area_3d_interact() -> void:
