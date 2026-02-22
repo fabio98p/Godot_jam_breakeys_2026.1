@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cahwui32p3i0a" path="res://model_scene/fence_scene.tscn" id="2_3hgmi"]
 [ext_resource type="PackedScene" uid="uid://n1mn4nt88hg5" path="res://model_scene/house.tscn" id="2_dvejp"]
 [ext_resource type="PackedScene" uid="uid://br1gwjdp68rt" path="res://Hud/hud.tscn" id="2_eabcg"]
-[ext_resource type="PackedScene" uid="uid://ds4mdksnyneiy" path="res://Hud/Inventory/inventory.tscn" id="3_dvejp"]
 [ext_resource type="PackedScene" uid="uid://cxxbtw6kle4f6" path="res://Hud/Plant_norm_seed_interface/plant_norm_seed_inteface.tscn" id="4_3hgmi"]
 [ext_resource type="PackedScene" uid="uid://c4qhtb3w4o8nb" path="res://Hud/Plant_tree_interface/plant_tree_inteface.tscn" id="5_xsqsu"]
 [ext_resource type="PackedScene" uid="uid://ctki7we0o8i8v" path="res://Hud/Sell_interface/sell_inteface.tscn" id="6_vmy0u"]
@@ -573,10 +572,6 @@ transform = Transform3D(0.033294678, 0, -0.99944556, 0, 1, 0, 0.99944556, 0, 0.0
 z_index = 0
 
 [node name="Hud" parent="CanvasLayer" unique_id=1988256769 instance=ExtResource("2_eabcg")]
-
-[node name="Inventory" parent="CanvasLayer" unique_id=353013162 instance=ExtResource("3_dvejp")]
-unique_name_in_owner = true
-visible = false
 
 [node name="Plant_norm_seed_inteface" parent="CanvasLayer" unique_id=1502669684 instance=ExtResource("4_3hgmi")]
 visible = false
