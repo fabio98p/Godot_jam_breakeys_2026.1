@@ -57,8 +57,9 @@ func _physics_process(delta: float) -> void:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 		# WASD movement vector
-		var input_dir := Input.get_vector("left", "right", "forward", "back")
-		
+		#var input_dir := Input.get_vector("left", "right", "forward", "back")
+		var input_dir := Input.get_vector( "back", "forward", "left", "right")
+				
 		# super basic locomotion
 		var new_velocity = Vector2.ZERO
 		var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0.0, input_dir.y)).normalized()

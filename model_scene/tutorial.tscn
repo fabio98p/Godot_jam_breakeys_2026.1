@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c57wm1nsblcip"]
+
+[ext_resource type="PackedScene" uid="uid://204ad5ll7ywi" path="res://Assets/models/tutorial1.glb" id="1_xe7ld"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_shy7r"]
+size = Vector3(1, 5.415161, 6.3862915)
+
+[node name="Tutorial" type="Node3D" unique_id=1062022075]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=711454046]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=562324009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47042465, 2.2075806, -0.4635315)
+shape = SubResource("BoxShape3D_shy7r")
+
+[node name="tutorial1" parent="." unique_id=1824369737 instance=ExtResource("1_xe7ld")]

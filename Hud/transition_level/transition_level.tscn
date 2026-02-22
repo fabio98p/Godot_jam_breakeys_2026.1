@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dy8xxtgoq71un"]
+
+[ext_resource type="Script" uid="uid://bdqyslfuem475" path="res://Hud/transition_level/transition_level.gd" id="1_3k7lc"]
+
+[node name="transition_level" type="Control" unique_id=1190442229]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3k7lc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1371844186]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

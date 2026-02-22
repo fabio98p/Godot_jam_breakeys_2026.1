@@ -16,6 +16,8 @@ signal show_sell_inteface(visibility: bool)
 signal update_all_interface
 signal finish_day
 
+
+signal init_level(state:bool)
 signal sleeping(state:bool)
 
 func _ready():
@@ -46,3 +48,9 @@ func init_sleeping():
 	sleeping.emit(true)
 	await get_tree().create_timer(5).timeout
 	sleeping.emit(false)
+
+
+func init_level_func():
+	init_level.emit(true)
+	await get_tree().create_timer(1).timeout
+	init_level.emit(false)

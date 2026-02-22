@@ -5,7 +5,11 @@ var item_resource: ItemResource
 @onready var description_label: Label = %DescriptionLabel
 @onready var button: Button = %Button
 @onready var icon_sprite_2d: Sprite2D = %icon_sprite2d
+@onready var price: Label = %Price
 
+func _ready() -> void:
+	price.text = str(int(item_resource.price)) + "$"
+	
 func update_item_box(item: ItemResource, button_are_disabled: bool = true):
 	icon_sprite_2d.texture = item.sprite
 	description_label.text = item.item_name
