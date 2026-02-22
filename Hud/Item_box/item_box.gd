@@ -17,11 +17,11 @@ func run_custom_signal():
 func update_item_box(item: ItemResource, button_are_disabled: bool = true):
 	icon_sprite_2d.texture = item.sprite
 	description_label.text = item.item_name
-	description_label.visible = false
+	description_label.get_parent().visible = false
 	item_resource = item
 	disabled = button_are_disabled
 
 func _on_mouse_entered() -> void:
-	description_label.visible = true
+	description_label.get_parent().visible = true
 func _on_mouse_exited() -> void:
-	description_label.visible = false
+	description_label.get_parent().visible = false

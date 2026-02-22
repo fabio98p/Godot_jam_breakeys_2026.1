@@ -30,6 +30,7 @@ func _on_area_3d_interact() -> void:
 	if spawn_area and spawn_area.get_child_count() > 0:
 		spawn_area.get_child(0).queue_free()
 	update_plant()
+	Utils.play_sfx("res://Assets/Sound/freesound_community-item-pickup-37089.mp3", "SFX", -25)
 	
 func update_plant():
 	if current_seed != null:

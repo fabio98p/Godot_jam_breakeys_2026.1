@@ -32,3 +32,4 @@ func plant_selected_seed(seed: ItemResource):
 	selected_dirt.plant_seed(seed)
 	Inventory.remove_item_from_list(seed)
 	update_item_list()
+	Utils.play_sfx("res://Assets/Sound/alexzavesa-clinking-coins-8-468434.mp3", "SFX", -25)

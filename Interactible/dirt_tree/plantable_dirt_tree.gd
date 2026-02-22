@@ -15,6 +15,7 @@ var models
 func plant_seed(seed: ItemResource):
 	item_planted = seed.duplicate(true)
 	update_plant()
+	Utils.play_sfx("res://Assets/Sound/freesound_community-item-pickup-37089.mp3", "SFX", -25)
 
 func _ready():
 	GS.finish_day.connect(_on_finish_day)
@@ -88,3 +89,4 @@ func _on_plant_plant_interact() -> void:
 func _on_put_water_interact() -> void:
 	dirt_wet = true
 	GS.bucket_full = false
+	Utils.play_sfx("res://Assets/Sound/universfield-splash-effect-229315.mp3", "SFX", -25)

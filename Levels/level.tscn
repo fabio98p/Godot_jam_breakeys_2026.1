@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cxxbtw6kle4f6" path="res://Hud/Plant_norm_seed_interface/plant_norm_seed_inteface.tscn" id="4_3hgmi"]
 [ext_resource type="PackedScene" uid="uid://c4qhtb3w4o8nb" path="res://Hud/Plant_tree_interface/plant_tree_inteface.tscn" id="5_xsqsu"]
 [ext_resource type="PackedScene" uid="uid://ctki7we0o8i8v" path="res://Hud/Sell_interface/sell_inteface.tscn" id="6_vmy0u"]
-[ext_resource type="PackedScene" uid="uid://llct4joldn85" path="res://Interactible/Bed/bed.tscn" id="7_jjxhf"]
 [ext_resource type="PackedScene" uid="uid://y8ebu5mpmgbd" path="res://Player/player.tscn" id="8_lybtp"]
 [ext_resource type="PackedScene" uid="uid://cwujqf46mulrg" path="res://Interactible/Shop/shop.tscn" id="9_8hqpc"]
 [ext_resource type="PackedScene" uid="uid://bu143vv81fge1" path="res://Interactible/dirt_tree/plantable_dirt_tree.tscn" id="10_jmcc3"]
@@ -624,9 +623,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9216204, 0.17422783, 3.1741
 
 [node name="Pool" parent="tree_seed_dirt" unique_id=281867830 instance=ExtResource("20_fw3l5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2908354, -0.13634229, 7.800715)
-
-[node name="Bed" parent="." unique_id=1566716998 instance=ExtResource("7_jjxhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0372396, 0.29050604, -1.7793194)
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="." unique_id=925796368]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)

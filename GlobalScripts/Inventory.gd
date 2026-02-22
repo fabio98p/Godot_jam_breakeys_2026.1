@@ -8,17 +8,7 @@ const SICKLE_SEED = preload("uid://d0vu6r8b4pqkx")
 const TREE_SAW_SEED = preload("uid://c1ll1afhttoq7")
 const TREE_TNT_SEED = preload("uid://cvjagbtpolvr4")
 
-
-
-
 var item_list: Array[ItemResource] = [
-AXE_SEED,
-KATANA_SEED,
-PICKAXE_SEED,
-SHOVEL_SEED,
-SICKLE_SEED,
-TREE_SAW_SEED,
-TREE_TNT_SEED
 ]
 
 func _process(delta: float) -> void:
